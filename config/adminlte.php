@@ -14,7 +14,7 @@ return [
     |
     */
 
-    'title' => 'SI Pondok Yatim',
+    'title' => 'Pondok Yatim',
     'title_prefix' => '',
     'title_postfix' => '',
 
