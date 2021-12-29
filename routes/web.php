@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\DataAnakController;
+use App\Http\Controllers\DataKegiatanController;
+use App\Http\Controllers\DonasiController;
+use App\Http\Controllers\DataDonasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,6 +68,11 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
     Route::get('beranda', function(){
         return view('beranda.index');
     })->middleware(['role:admin']);
+
+    Route::resource('data_anak', DataAnakController::class);
+    Route::resource('data_kegiatan', DataKegiatanController::class);
+    Route::resource('donasi', DonasiController::class);
+    Route::resource('data_donasi', DataDonasiController::class);
 
 });
 

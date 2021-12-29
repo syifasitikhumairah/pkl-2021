@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Donasi;
 use Illuminate\Http\Request;
 
 class DonasiController extends Controller
@@ -14,7 +14,7 @@ class DonasiController extends Controller
     public function index()
     {
         $donasi = Donasi::all();
-        return view('admin.donasi.index', compact('donasi'));
+        return view('donasi.index', compact('donasi'));
     }
 
     /**
@@ -24,7 +24,7 @@ class DonasiController extends Controller
      */
     public function create()
     {
-        return view('admin.donasi.create');
+        return view('donasi.create');
     }
 
     /**
@@ -71,7 +71,7 @@ class DonasiController extends Controller
     {
         //
         $donasi = Donasi::findOrFail($id);
-        return view('admin.donasi.show', compact('donasi'));
+        return view('donasi.show', compact('donasi'));
     }
 
     /**
@@ -84,7 +84,7 @@ class DonasiController extends Controller
     {
         //
         $donasi = Donasi::findOrFail($id);
-        return view('admin.donasi.edit', compact('donasi'));
+        return view('donasi.edit', compact('donasi'));
     }
 
     /**

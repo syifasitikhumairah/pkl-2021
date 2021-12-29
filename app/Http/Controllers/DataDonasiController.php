@@ -1,7 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Donasi;
+use App\Models\DataDonasi;
 use Illuminate\Http\Request;
 
 class DataDonasiController extends Controller
@@ -22,7 +23,7 @@ class DataDonasiController extends Controller
         // yang berelasi melalui method 'Donasi'
         // yang berasal dari model 'Data Donasi'
         $datadonasi = DataDonasi::with('donasi')->get();
-        return view('admin.data_donasi.index', compact('datadonasi'));
+        return view('data_donasi.index', compact('datadonasi'));
     }
 
     /**
@@ -33,7 +34,7 @@ class DataDonasiController extends Controller
     public function create(){
         //mengambil data donasi
         $donasi = Donasi::all();
-        return view('admin.data_donasi.create', compact('donasi'));
+        return view('data_donasi.create', compact('donasi'));
         }
 
     /**
@@ -57,52 +58,51 @@ class DataDonasiController extends Controller
         ]);
 
         $datadonasi = new DataDonasi;
-        $datadonasi->title = $request->title;
-        $datadonasi->author_id = $request->author_id;
-        // upload image / foto
-        if ($request->hasFile('cover')) {
-            $image = $request->file('cover');
-            $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('images/books/', $name);
-            $datadonasi->cover = $name;
-        }
-        $datadonasi->amount = $request->amount;
+        $datadonasi->id_donasi = $request->id_donasi;
+        $datadonasi->nm_donatur = $request->nm_donatur;
+        $datadonasi->nominal = $request->nominal;
+        $datadonasi->tanggal = $request->tanggal;
+        $datadonasi->keterangan = $request->keterangan;
+        $datadonasi->norek = $request->norek;
+        $datadonasi->nm_bank = $request->nm_bank;
+        $datadonasi->pemilik_rek = $request->pemilik_rek;
+        $datadonasi->telepon = $request->telepon;
         $datadonasi->save();
-        return redirect()->route('books.index');
+        return redirect()->route('data_donasi.index');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Book $datadonasi
+     * @param  \App\Models\DataDonasi $datadonasi
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
-       $datadonasi = Book::findOrFail($id);
-        return view('admin.book.show', compact('book'));
+       $datadonasi = DataDonasi::findOrFail($id);
+        return view('data_donasi.show', compact('datadonasi'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Book $datadonasi
+     * @param  \App\Models\DataDonasi $datadonasi
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        $datadonasi = Book::findOrFail($id);
-        $author = Author::all();
-        return view('admin.book.edit', compact('book', 'author'));
+        $datadonasi = DataDonasi::findOrFail($id);
+        $donasi = Donasi::all();
+        return view('data_donasi.edit', compact('datadonasi', 'donasi'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Book $datadonasi
+     * @param  \App\Models\DataDonasi $datadonasi
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -120,36 +120,33 @@ class DataDonasiController extends Controller
             'telepon' => 'required',
         ]);
 
-        $datadonasi = Book::findOrFail($id);
-        $datadonasi->title = $request->title;
-        $datadonasi->author_id = $request->author_id;
-        // upload image / foto
-        if ($request->hasFile('cover')) {
-            $datadonasi->deleteImage();
-            $image = $request->file('cover');
-            $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('images/books/', $name);
-            $datadonasi->cover = $name;
-        }
-        $datadonasi->amount = $request->amount;
+        $datadonasi = DataDonasi::findOrFail($id);
+        $datadonasi->id_donasi = $request->id_donasi;
+        $datadonasi->nm_donatur = $request->nm_donatur;
+        $datadonasi->nominal = $request->nominal;
+        $datadonasi->tanggal = $request->tanggal;
+        $datadonasi->keterangan = $request->keterangan;
+        $datadonasi->norek = $request->norek;
+        $datadonasi->nm_bank = $request->nm_bank;
+        $datadonasi->pemilik_rek = $request->pemilik_rek;
+        $datadonasi->telepon = $request->telepon;
         $datadonasi->save();
-        return redirect()->route('books.index');
+        return redirect()->route('data_donasi.index');
 
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Book $datadonasi
+     * @param  \App\Models\DataDonasi $datadonasi
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         //
-        $datadonasi = Book::findOrFail($id);
-        $datadonasi->deleteImage();
+        $datadonasi = DataDonasi::findOrFail($id);
         $datadonasi->delete();
-        return redirect()->route('books.index');
+        return redirect()->route('data_donasi.index');
     }
 
 }

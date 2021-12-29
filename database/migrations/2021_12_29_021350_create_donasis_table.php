@@ -18,10 +18,10 @@ class CreateDonasisTable extends Migration
             $table->string('nm_donatur');
             $table->integer('nominal')->unsigned();
             $table->date('tanggal');
-            $table->string('keterangan');
             $table->integer('norek')->unsigned();
             $table->string('nm_bank');
-            $table->string('pemilik_rek');
+            $table->string('pemilik_rek'); 
+            $table->string('keterangan');
             $table->timestamps();
         });
     }

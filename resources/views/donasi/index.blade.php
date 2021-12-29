@@ -4,7 +4,7 @@
 
 @section('content_header')
 
-Dashboard
+DATA DONASI
 
 @endsection
 
@@ -14,32 +14,42 @@ Dashboard
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Data Kegiatan
-                    <a href="{{route('data_kegiatan.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Data Kegiatan</a>
+                    Donasi
+                    <a href="{{route('donasi.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Donasi</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
                                 <th>No</th>
-                                <th>Judul</th>
+                                <th>Nama Donatur</th>
+                                <th>Nominal</th>
                                 <th>Tanggal</th>
-                                <th>Foto</th>
+                                <th>Norek</th>
+                                <th>Nama Bank</th>
+                                <th>Pemilik Rek</th>
+                                <th>Telepon</th>
+                                <th>Keterangan</th>
                                 <th>Aksi</th>
                             </tr>
                             @php $no=1; @endphp
-                            @foreach($kegiatan as $data)
+                            @foreach($donasi as $data)
                             <tr>
                                 <td>{{$no++}}</td>
-                                <td>{{$data->judul}}</td>
-                                <td>{{$data->tanggal}}</th>
-                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Gambar"></td>
+                                <td>{{$data->nm_donatur}}</td>
+                                <td>{{$data->nominal}}</td>
+                                <td>{{$data->tanggal}}</td>
+                                <td>{{$data->norek}}</td>
+                                <td>{{$data->nm_bank}}</td>
+                                <td>{{$data->pemilik_rek}}</td>
+                                <td>{{$data->telepon}}</td>
+                                <td>{{$data->keterangan}}</td>
                                 <td>
-                                    <form action="{{route('data_kegiatan.destroy',$data->id)}}" method="post">
+                                    <form action="{{route('donasi.destroy',$data->id)}}" method="post">
                                         @method('delete')
                                         @csrf
-                                        <a href="{{route('data_kegiatan.edit',$data->id)}}" class="btn btn-outline-info">Edit</a>
-                                        <a href="{{route('data_kegiatan.show',$data->id)}}" class="btn btn-outline-warning">Show</a>
+                                        <a href="{{route('donasi.edit',$data->id)}}" class="btn btn-outline-info">Edit</a>
+                                        <a href="{{route('donasi.show',$data->id)}}" class="btn btn-outline-warning">Show</a>
                                         <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapus ini?');">Delete</button>
                                     </form>
                                 </td>

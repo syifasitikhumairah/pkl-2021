@@ -18,8 +18,8 @@ class DataAnakController extends Controller
 
     public function index()
     {
-        $anak = Anak::all();
-        return view('admin.data_anak.index', compact('anak'));
+        $data_anak = DataAnak::all();
+        return view('data_anak.index', compact('data_anak'));
     }
 
     /**
@@ -29,7 +29,7 @@ class DataAnakController extends Controller
      */
     public function create()
     {
-        return view('admin.data_anak.create');
+        return view('data_anak.create');
     }
 
     /**
@@ -52,50 +52,55 @@ class DataAnakController extends Controller
             'foto' => 'required|image|max:2048',
         ]);
 
-        $anak = new Anak;
-        $anak->nm_anak = $request->nm_anak;
-        $anak->tempat_lahir = $request->tempat_lahir;
-        $anak->tgl_lahir = $request->tgl_lahir;
-        $anak->jk = $request->jk;
-        $anak->pendidikan = $request->pendidikan;
-        $anak->nm_wali = $request->nm_wali;
-        $anak->alamat = $request->alamat;
-        $anak->foto = $request->foto;
-        $anak->save();
+        $data_anak = new DataAnak;
+        $data_anak->nm_anak = $request->nm_anak;
+        $data_anak->tempat_lahir = $request->tempat_lahir;
+        $data_anak->tgl_lahir = $request->tgl_lahir;
+        $data_anak->jk = $request->jk;
+        $data_anak->pendidikan = $request->pendidikan;
+        $data_anak->nm_wali = $request->nm_wali;
+        $data_anak->alamat = $request->alamat;
+        // upload image / foto
+        if ($request->hasFile('foto')) {
+            $image = $request->file('foto');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('images/anak/', $name);
+            $datadonasi->foto = $name;
+        $data_anak->save();
         return redirect()->route('data_anak.index');
     }
-
+}
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\DataAnak  $anak
+     * @param  \App\Models\DataAnak  $data_anak
      * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
         //
-        $anak = Anak::findOrFail($id);
-        return view('admin.data_anak.show', compact('anak'));
+        $data_anak = DataAnak::findOrFail($id);
+        return view('data_anak.show', compact('data_anak'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\DataAnak  $anak
+     * @param  \App\Models\DataAnak  $data_anak
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
         //
-        $anak = Anak::findOrFail($id);
-        return view('admin.data_anak.edit', compact('anak'));
+        $data_anak = DataAnak::findOrFail($id);
+        return view('data_anak.edit', compact('data_anak'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\DataAnak  $anak
+     * @param  \App\Models\DataAnak  $data_anak
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -109,39 +114,41 @@ class DataAnakController extends Controller
             'pendidikan' => 'required',
             'nm_wali' => 'required',
             'alamat' => 'required',
-            'foto' => 'required|image|max:2048',
+            
         ]);
 
-        $anak = Anak::findOrFail($id);
-        $anak->nm_anak = $request->nm_anak;
-        $anak->tempat_lahir = $request->tempat_lahir;
-        $anak->tgl_lahir = $request->tgl_lahir;
-        $anak->jk = $request->jk;
-        $anak->pendidikan = $request->pendidikan;
-        $anak->nm_wali = $request->nm_wali;
-        $anak->alamat = $request->alamat;
+        $data_anak = DataAnak::findOrFail($id);
+        $data_anak->nm_anak = $request->nm_anak;
+        $data_anak->tempat_lahir = $request->tempat_lahir;
+        $data_anak->tgl_lahir = $request->tgl_lahir;
+        $data_anak->jk = $request->jk;
+        $data_anak->pendidikan = $request->pendidikan;
+        $data_anak->nm_wali = $request->nm_wali;
+        $data_anak->alamat = $request->alamat;
         // upload image / foto
         if ($request->hasFile('foto')) {
             $image = $request->file('foto');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('images/anak/', $nm_anak);
-            $datadonasi->foto = $nm_anak;
-        }
-        $anak->save();
+            $image->move('images/anak/', $name);
+            $datadonasi->foto = $name;
+        $data_anak->save();
         return redirect()->route('data_anak.index');
     }
+}
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\DataAnak  $anak
+     * @param  \App\Models\DataAnak  $data_anak
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
         //
-        $anak = Anak::findOrFail($id);
-        $anak->delete();
+        $data_anak = DataAnak::findOrFail($id);
+        $data_anak->deleteImage();
+        $data_anak->delete();
         return redirect()->route('data_anak.index');
     }
 }
+

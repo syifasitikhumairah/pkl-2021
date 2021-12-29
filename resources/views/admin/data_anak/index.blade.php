@@ -21,7 +21,7 @@ Dashboard
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
-                                <th>No</th>
+                                <th>Nomor</th>
                                 <th>Nama Anak</th>
                                 <th>Tempat Lahir</th>
                                 <th>Tanggal Lahir</th>
@@ -43,7 +43,7 @@ Dashboard
                                 <td>{{$data->pendidikan}}</td>
                                 <td>{{$data->nm_wali}}</td>
                                 <td>{{$data->alamat}}</td>
-                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Foto"></td>
+                                <td>{{$data->foto}}</td>
                                 <td>
                                     <form action="{{route('data_anak.destroy',$data->id)}}" method="post">
                                         @method('delete')

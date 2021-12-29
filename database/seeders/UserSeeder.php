@@ -65,7 +65,7 @@ class UserSeeder extends Seeder
         $pengunjung = new User();
         $pengunjung->name = 'Pengunjung';
         $pengunjung->email = 'pengunjung@gmail.com';
-        $pengunjung->password = Hash::make('12345678');
+        $pengunjung->password = Hash::make('12345');
         $pengunjung->save();
 
         $user->attachRole($admin);
