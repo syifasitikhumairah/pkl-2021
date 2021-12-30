@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Pondok Yatim | Data Anak Asuh')
 
 @section('content_header')
 
-Dashboard
+Data Anak Asuh
 
 @endsection
 
@@ -29,7 +29,6 @@ Dashboard
                                 <th>Pendidikan</th>
                                 <th>Nama Wali</th>
                                 <th>Alamat</th>
-                                <th>Foto</th>
                                 <th>Aksi</th>
                             </tr>
                             @php $no=1; @endphp
@@ -43,7 +42,6 @@ Dashboard
                                 <td>{{$data->pendidikan}}</td>
                                 <td>{{$data->nm_wali}}</td>
                                 <td>{{$data->alamat}}</td>
-                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Foto"></td>
                                 <td>
                                     <form action="{{route('data_anak.destroy',$data->id)}}" method="post">
                                         @method('delete')

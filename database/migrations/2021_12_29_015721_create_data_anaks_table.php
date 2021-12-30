@@ -22,7 +22,7 @@ class CreateDataAnaksTable extends Migration
             $table->string('pendidikan');
             $table->string('nm_wali');
             $table->string('alamat');
-            $table->string('foto')->nullabel();
+            // $table->string('cover')->nullabel();
             $table->timestamps();
         });
     }

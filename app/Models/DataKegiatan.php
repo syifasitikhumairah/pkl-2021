@@ -17,20 +17,4 @@ class DataKegiatan extends Model
     //mencatat waktu pembuatan dan update data otomatis
     public $timestamps=true;
 
-    public function image()
-    {
-        if ($this->gambar && file_exists(public_path('images/kegiatan/' . $this->gambar))) {
-            return asset('images/kegiatan/' . $this->gambar);
-        } else {
-            return asset('images/no_image.png');
-        }
-    }
-
-    public function deleteImage()
-    {
-        if ($this->gambar && file_exists(public_path('images/kegiatan/' . $this->gambar))) {
-            return unlink(public_path('images/kegiatan/' . $this->gambar));
-        }
-
-    }
 }

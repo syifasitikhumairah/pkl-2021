@@ -44,13 +44,11 @@ class DataKegiatanController extends Controller
         $validated = $request->validate([
             'judul' => 'required',
             'tanggal' => 'required',
-            'gambar' => 'required|image|max:2048',
         ]);
 
         $kegiatan = new DataKegiatan;
         $kegiatan->judul = $request->judul;
         $kegiatan->tanggal = $request->tanggal;
-        $kegiatan->gambar = $request->gambar;
         $kegiatan->save();
         return redirect()->route('data_kegiatan.index');
     }
@@ -65,7 +63,7 @@ class DataKegiatanController extends Controller
     {
         //
         $kegiatan = DataKegiatan::findOrFail($id);
-        return view('admin.data_kegiatan.show', compact('kegiatan'));
+        return view('data_kegiatan.show', compact('kegiatan'));
     }
 
     /**
@@ -78,7 +76,7 @@ class DataKegiatanController extends Controller
     {
         //
         $kegiatan = DataKegiatan::findOrFail($id);
-        return view('admin.data_kegiatan.edit', compact('kegiatan'));
+        return view('data_kegiatan.edit', compact('kegiatan'));
     }
 
     /**
@@ -94,13 +92,11 @@ class DataKegiatanController extends Controller
         $validated = $request->validate([
             'judul' => 'required',
             'tanggal' => 'required',
-            'gambar' => 'required|image|max:2048',
         ]);
 
         $kegiatan = DataKegiatan::findOrFail($id);
         $kegiatan->judul = $request->judul;
         $kegiatan->tanggal = $request->tanggal;
-        $kegiatan->gambar = $request->gambar;
         $kegiatan->save();
         return redirect()->route('data_kegiatan.index');
     }
@@ -115,7 +111,6 @@ class DataKegiatanController extends Controller
     {
         //
         $kegiatan = DataKegiatan::findOrFail($id);
-        $kegiatan->deleteImage();
         $kegiatan->delete();
         return redirect()->route('data_kegiatan.index');
     }

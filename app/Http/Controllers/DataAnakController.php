@@ -49,7 +49,6 @@ class DataAnakController extends Controller
             'pendidikan' => 'required',
             'nm_wali' => 'required',
             'alamat' => 'required',
-            'foto' => 'required|image|max:2048',
         ]);
 
         $data_anak = new DataAnak;
@@ -60,16 +59,10 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->alamat = $request->alamat;
-        // upload image / foto
-        if ($request->hasFile('foto')) {
-            $image = $request->file('foto');
-            $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('images/anak/', $name);
-            $datadonasi->foto = $name;
         $data_anak->save();
         return redirect()->route('data_anak.index');
     }
-}
+  
     /**
      * Display the specified resource.
      *
@@ -125,16 +118,10 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->alamat = $request->alamat;
-        // upload image / foto
-        if ($request->hasFile('foto')) {
-            $image = $request->file('foto');
-            $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('images/anak/', $name);
-            $datadonasi->foto = $name;
         $data_anak->save();
         return redirect()->route('data_anak.index');
+
     }
-}
 
     /**
      * Remove the specified resource from storage.
@@ -146,7 +133,6 @@ class DataAnakController extends Controller
     {
         //
         $data_anak = DataAnak::findOrFail($id);
-        $data_anak->deleteImage();
         $data_anak->delete();
         return redirect()->route('data_anak.index');
     }
