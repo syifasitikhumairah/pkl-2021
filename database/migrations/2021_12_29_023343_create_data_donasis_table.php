@@ -17,11 +17,12 @@ class CreateDataDonasisTable extends Migration
             $table->id();
             $table->bigInteger('id_donasi')->unsigned();
             $table->string('nm_donatur');
-            $table->integer('nominal')->unsigned();
+            $table->bigInteger('nominal')->unsigned();
             $table->date('tanggal');
-            $table->integer('norek')->unsigned();
+            $table->bigInteger('norek')->unsigned();
             $table->string('nm_bank');
             $table->string('pemilik_rek');
+            $table->bigInteger('telepon')->unsigned();
             $table->string('keterangan');
             // fk id_donatur
             $table->foreign('id_donasi')->references('id')

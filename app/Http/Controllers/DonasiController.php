@@ -11,12 +11,6 @@ class DonasiController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        $donasi = Donasi::all();
-        return view('donasi.index', compact('donasi'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -26,7 +20,11 @@ class DonasiController extends Controller
     {
         return view('donasi.create');
     }
-
+    
+    public function index()
+        {
+            return view('donasi.create');
+        }
     /**
      * Store a newly created resource in storage.
      *
@@ -48,7 +46,7 @@ class DonasiController extends Controller
             
         ]);
 
-        $donasi = new Kegiatan;
+        $donasi = new Donasi;
         $donasi->nm_donatur = $request->nm_donatur;
         $donasi->nominal = $request->nominal;
         $donasi->tanggal = $request->tanggal;

@@ -65,15 +65,10 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
         return view('data_donasi.index');
     })->middleware(['role:admin']);
 
-    Route::get('beranda', function(){
-        return view('beranda.index');
-    })->middleware(['role:admin']);
-
     Route::resource('data_anak', DataAnakController::class);
     Route::resource('data_kegiatan', DataKegiatanController::class);
-    Route::resource('donasi', DonasiController::class);
     Route::resource('data_donasi', DataDonasiController::class);
 
 });
-
+ Route::resource('donasi', DonasiController::class);
     

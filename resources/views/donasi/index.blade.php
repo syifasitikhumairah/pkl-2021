@@ -37,7 +37,7 @@ DATA DONASI
                             <tr>
                                 <td>{{$no++}}</td>
                                 <td>{{$data->nm_donatur}}</td>
-                                <td>{{$data->nominal}}</td>
+                                <td>Rp.{{number_format ($data->nominal)}}</td>
                                 <td>{{$data->tanggal}}</td>
                                 <td>{{$data->norek}}</td>
                                 <td>{{$data->nm_bank}}</td>
