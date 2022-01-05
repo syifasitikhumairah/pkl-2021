@@ -5,6 +5,7 @@ use App\Http\Controllers\DataAnakController;
 use App\Http\Controllers\DataKegiatanController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\DataDonasiController;
+use App\Http\Controllers\KonfirmasiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,7 +69,9 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
     Route::resource('data_anak', DataAnakController::class);
     Route::resource('data_kegiatan', DataKegiatanController::class);
     Route::resource('data_donasi', DataDonasiController::class);
+    Route::resource('donasi', DonasiController::class);
+    Route::resource('konfirmasi', KonfirmasiController::class);
 
 });
- Route::resource('donasi', DonasiController::class);
+ 
     

@@ -16,15 +16,16 @@ class DonasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function index()
+    {
+        $donasi = Donasi::all();
+        return view('donasi.index', compact('donasi'));
+    }
     public function create()
     {
         return view('donasi.create');
     }
-    
-    public function index()
-        {
-            return view('donasi.create');
-        }
+
     /**
      * Store a newly created resource in storage.
      *

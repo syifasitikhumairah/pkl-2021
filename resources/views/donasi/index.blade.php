@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Pondok Yatim | Donasi')
 
 @section('content_header')
 
-DATA DONASI
+Data Donasi
 
 @endsection
 

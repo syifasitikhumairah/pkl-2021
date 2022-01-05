@@ -24,10 +24,10 @@ class CreateDataDonasisTable extends Migration
             $table->string('pemilik_rek');
             $table->bigInteger('telepon')->unsigned();
             $table->string('keterangan');
-            // fk id_donatur
-            $table->foreign('id_donasi')->references('id')
-                ->on('donasis')->onUpdate('cascade')
-                ->onDelete('cascade');
+            // // fk id_donatur
+            // $table->foreign('id_donasi')->references('id')
+            //     ->on('donasis')->onUpdate('cascade')
+            //     ->onDelete('cascade');
             $table->timestamps();
         });
     }

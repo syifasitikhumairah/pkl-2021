@@ -92,7 +92,7 @@ Tambah Donasi
 
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
-                            <button type="submit" href=".donasi.index"  class="btn btn-outline-primary">Simpan</button>
+                            <button type="submit" class="btn btn-outline-primary">Simpan</button>
                         </div>
                    </form>
                 </div>
