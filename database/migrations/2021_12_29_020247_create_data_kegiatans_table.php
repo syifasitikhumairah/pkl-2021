@@ -16,6 +16,7 @@ class CreateDataKegiatansTable extends Migration
         Schema::create('data_kegiatans', function (Blueprint $table) {
             $table->id();
             $table->string('judul');
+            $table->string('cover')->nullabel();
             $table->date('tanggal');
             $table->timestamps();
         });

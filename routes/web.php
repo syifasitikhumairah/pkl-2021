@@ -19,7 +19,7 @@ use App\Http\Controllers\KonfirmasiController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('tampilan.frontend');
 });
 
 Auth::routes(

@@ -65,9 +65,9 @@ class PondoksSeeder extends Seeder
             'nominal' => 1000000, 
             'tanggal' => '2020-12-29', 
             'norek' => 299810000506,
-            'nm_bank' => 'OCBC NISP',
+            'nm_bank' => 'BCA',
             'pemilik_rek' => 'Rizaldy Zakia Fahmi',
-            'telepon' => 81822675094,
+            'telepon' => '081822675094',
             'keterangan' => 'Semoga Bermanfaat',
         ]);
         $donasi2 = Donasi::create([
@@ -77,7 +77,7 @@ class PondoksSeeder extends Seeder
             'norek' => 8977000987,
             'nm_bank' => 'BCA',
             'pemilik_rek' => 'Suseno Atmaja',
-            'telepon' => 89509566704,
+            'telepon' => '089509566704',
             'keterangan' => 'Ada bantuan yg nominalnya tidak seberapa, semoga berkah',
         ]);
         $donasi3 = Donasi::create([
@@ -87,7 +87,7 @@ class PondoksSeeder extends Seeder
             'norek' => 3498100004583,
             'nm_bank' => 'Mandiri',
             'pemilik_rek' => 'Susanti',
-            'telepon' => 8722940862,
+            'telepon' => '08722940862',
             'keterangan' => 'Bismillah, semoga bermanfaat :)',
         ]);
 

@@ -28,7 +28,7 @@ Tambah Donasi
                         </div>
                         <div class="form-group">
                             <label for=""> Masukkan Nominal</label>
-                            <input type="number" name="nominal" placeholder="Rp. "   class="form-control @error('nominal') is-invalid @enderror">
+                            <input type="number" name="nominal" placeholder="Rp. " class="form-control @error('nominal') is-invalid @enderror">
                              @error('nominal')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -55,7 +55,12 @@ Tambah Donasi
                         </div>
                         <div class="form-group">
                             <label for="">Masukan Nama Bank</label>
-                            <input type="text" name="nm_bank" class="form-control @error('nm_bank') is-invalid @enderror">
+                            <select name="nm_bank" class="form-control @error('nm_bank') is-invalid @enderror" >
+                                    <option value="BCA">BCA</option>
+                                    <option value="BRI">BRI</option>
+                                    <option value="Mandiri">Mandiri</option>
+                                    <option value="BSI">BSI</option>
+                            </select>
                              @error('nm_bank')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>

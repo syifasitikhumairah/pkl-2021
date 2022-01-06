@@ -57,7 +57,7 @@ Edit Data Anak Asuh
                         </div>
                         <div class="form-group">
                             <label for="">Pendidikan</label>
-                            <select name="pendidikan">
+                            <select name="pendidikan" class="form-control @error('pendidikan') is-invalid @enderror" >
                                     <option value="-">-</option>
                                     <option value="Pra-TK">Pra-TK</option>
                                     <option value="Pendidikan Anak Usia Dini">Pendidikan Anak Usia Dini</option>
@@ -89,7 +89,7 @@ Edit Data Anak Asuh
                                 </span>
                             @enderror
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="">Masukkan Foto</label>
                             <input type="number" name="cover" value="{{$data_anak->cover}}" class="form-control @error('telepon') is-invalid @enderror">
                              @error('cover')
@@ -97,7 +97,7 @@ Edit Data Anak Asuh
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>

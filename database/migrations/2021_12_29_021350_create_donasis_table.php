@@ -21,7 +21,7 @@ class CreateDonasisTable extends Migration
             $table->bigInteger('norek')->unsigned();
             $table->string('nm_bank');
             $table->string('pemilik_rek');
-            $table->bigInteger('telepon')->unsigned();
+            $table->char('telepon');
             $table->string('keterangan');
             $table->timestamps();
         });

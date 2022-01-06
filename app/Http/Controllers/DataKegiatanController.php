@@ -43,11 +43,19 @@ class DataKegiatanController extends Controller
         // validasi data
         $validated = $request->validate([
             'judul' => 'required',
+            'cover' => 'required|image|max:2048',
             'tanggal' => 'required',
         ]);
 
         $kegiatan = new DataKegiatan;
         $kegiatan->judul = $request->judul;
+        // upload image
+        if ($request->hasFile('cover')){
+            $image = $request->file('cover');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('image/kegiatan/', $name);
+            $kegiatan->cover = $name;
+        }
         $kegiatan->tanggal = $request->tanggal;
         $kegiatan->save();
         return redirect()->route('data_kegiatan.index');
@@ -96,6 +104,14 @@ class DataKegiatanController extends Controller
 
         $kegiatan = DataKegiatan::findOrFail($id);
         $kegiatan->judul = $request->judul;
+        // upload image / foto
+        if ($request->hasFile('cover')) {
+            $book->deleteImage();
+            $image = $request->file('cover');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('image/kegiatan/', $name);
+            $kegiatan->cover = $name;
+        }
         $kegiatan->tanggal = $request->tanggal;
         $kegiatan->save();
         return redirect()->route('data_kegiatan.index');
@@ -110,8 +126,11 @@ class DataKegiatanController extends Controller
     public function destroy($id)
     {
         //
-        $kegiatan = DataKegiatan::findOrFail($id);
-        $kegiatan->delete();
+        if(!DataKegiatan::destroy($id)) return redirect()->back();
+        Session::flash("flash_notification", [
+            "level"=>"succes",
+            "message"=>"Barang berhasil dihapus"
+        ]);
         return redirect()->route('data_kegiatan.index');
     }
 }

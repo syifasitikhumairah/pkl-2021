@@ -23,8 +23,8 @@ Data Kegiatan
                             <tr>
                                 <th>No</th>
                                 <th>Judul</th>
+                                <th>Foto</th>
                                 <th>Tanggal</th>
-                                <!-- <th>Foto</th> -->
                                 <th>Aksi</th>
                             </tr>
                             @php $no=1; @endphp
@@ -32,6 +32,7 @@ Data Kegiatan
                             <tr>
                                 <td>{{$no++}}</td>
                                 <td>{{$data->judul}}</td>
+                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Cover"></td>
                                 <td>{{$data->tanggal}}</th>
                                 <td>
                                     <form action="{{route('data_kegiatan.destroy',$data->id)}}" method="post">

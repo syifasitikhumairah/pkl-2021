@@ -49,6 +49,7 @@ class DataAnakController extends Controller
             'pendidikan' => 'required',
             'nm_wali' => 'required',
             'alamat' => 'required',
+            'cover' => 'required|image|max:2048',
         ]);
 
         $data_anak = new DataAnak;
@@ -59,6 +60,13 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->alamat = $request->alamat;
+        // upload image
+        if ($request->hasFile('cover')){
+            $image = $request->file('cover');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('image/anak/', $name);
+            $data_anak->cover = $name;
+        }
         $data_anak->save();
         return redirect()->route('data_anak.index');
     }
@@ -118,6 +126,14 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->alamat = $request->alamat;
+        // upload image / foto
+        if ($request->hasFile('cover')) {
+            $data_anak->deleteImage();
+            $image = $request->file('cover');
+            $name = rand(1000, 9999) . $image->getClientOriginalName();
+            $image->move('image/anak/', $name);
+            $data_anak->cover = $name;
+        }
         $data_anak->save();
         return redirect()->route('data_anak.index');
 
@@ -132,8 +148,11 @@ class DataAnakController extends Controller
     public function destroy($id)
     {
         //
-        $data_anak = DataAnak::findOrFail($id);
-        $data_anak->delete();
+        if(!DataAnak::destroy($id)) return redirect()->back();
+        Session::flash("flash_notification", [
+            "level"=>"succes",
+            "message"=>"Barang berhasil dihapus"
+        ]);
         return redirect()->route('data_anak.index');
     }
 }

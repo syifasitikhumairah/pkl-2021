@@ -43,10 +43,10 @@ Menampilkan Data Anak Asuh
                             <label for="">Alamat</label>
                             <input type="text" name="alamat" value="{{$data_anak->alamat}}" class="form-control" readonly>
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="">Foto</label>
-                            <input type="file" name="foto" value="{{$data_anak->foto}}" class="form-control" readonly>
-                        </div> -->
+                            <input type="file" name="cover" value="{{$data_anak->cover}}" class="form-control" readonly>
+                        </div>
                     <div class="form-group">
                         <a href="{{url('admin/data_anak')}}" class="btn btn-block btn-outline-primary">Kembali</a>
                     </div>

@@ -88,7 +88,7 @@ Tambah Data Anak Asuh
                                 </span>
                             @enderror
                         </div>
-                        <!-- <div class="form-group">
+                        <div class="form-group">
                             <label for="">Masukan Foto Anak</label>
                             <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
                              @error('cover')
@@ -96,7 +96,7 @@ Tambah Data Anak Asuh
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>
