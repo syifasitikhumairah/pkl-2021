@@ -43,7 +43,7 @@ Data Anak Asuh
                                 <td>{{$data->pendidikan}}</td>
                                 <td>{{$data->nm_wali}}</td>
                                 <td>{{$data->alamat}}</td>
-                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt="Cover"></td>
+                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt=""></td>
                                 <td>
                                     <form action="{{route('data_anak.destroy',$data->id)}}" method="post">
                                         @method('delete')

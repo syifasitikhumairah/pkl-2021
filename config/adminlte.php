@@ -46,7 +46,7 @@ return [
     */
 
     'logo' => '<b>Pondok</b> Yatim',
-    'logo_img' => 'vendor/adminlte/dist/img/Logo.png',
+    'logo_img' => 'vendor/adminlte/dist/img/logo1.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -255,7 +255,7 @@ return [
         ],
         [
             'text'    => 'Data Donasi',
-            'url'  => 'admin/data_donasi',
+            'url'  => 'admin/donasi',
             'icon'    => 'fas fa-hand-holding-heart',
         ],
     ],

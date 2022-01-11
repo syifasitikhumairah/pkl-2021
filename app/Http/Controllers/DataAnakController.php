@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Session;
 use App\Models\DataAnak;
 use Illuminate\Http\Request;
 
@@ -49,7 +50,7 @@ class DataAnakController extends Controller
             'pendidikan' => 'required',
             'nm_wali' => 'required',
             'alamat' => 'required',
-            'cover' => 'required|image|max:2048',
+            'cover'=>'required|image|max:2048',
         ]);
 
         $data_anak = new DataAnak;
@@ -60,11 +61,11 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->alamat = $request->alamat;
-        // upload image
-        if ($request->hasFile('cover')){
+        // upload image / foto
+        if ($request->hasFile('cover')) {
             $image = $request->file('cover');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('image/anak/', $name);
+            $image->move('image/anaks/', $name);
             $data_anak->cover = $name;
         }
         $data_anak->save();
@@ -115,7 +116,6 @@ class DataAnakController extends Controller
             'pendidikan' => 'required',
             'nm_wali' => 'required',
             'alamat' => 'required',
-            
         ]);
 
         $data_anak = DataAnak::findOrFail($id);
@@ -131,7 +131,7 @@ class DataAnakController extends Controller
             $data_anak->deleteImage();
             $image = $request->file('cover');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('image/anak/', $name);
+            $image->move('image/anaks/', $name);
             $data_anak->cover = $name;
         }
         $data_anak->save();

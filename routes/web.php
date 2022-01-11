@@ -19,7 +19,11 @@ use App\Http\Controllers\KonfirmasiController;
 */
 
 Route::get('/', function () {
-    return view('tampilan.frontend');
+    return view('layouts.frontend');
+});
+
+Route::get('/dns', function () {
+    return view('tampilan.donasi');
 });
 
 Auth::routes(
@@ -62,8 +66,8 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
         return view('data_kegiatan.index');
     })->middleware(['role:admin']);
 
-    Route::get('data_donasi', function(){
-        return view('data_donasi.index');
+    Route::get('donasi', function(){
+        return view('donasi.index');
     })->middleware(['role:admin']);
 
     Route::resource('data_anak', DataAnakController::class);

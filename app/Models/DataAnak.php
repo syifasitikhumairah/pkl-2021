@@ -19,18 +19,17 @@ class DataAnak extends Model
 
     public function image()
     {
-        if ($this->cover && file_exists(public_path('image/anak/' . $this->cover))) {
-            return asset('image/anak/' . $this->cover);
+        if ($this->cover && file_exists(public_path('image/anaks/' . $this->cover))) {
+            return asset('image/anaks/' . $this->cover);
         } else {
             return asset('image/no_image.png');
         }
     }
-
+     
     public function deleteImage()
     {
-        if ($this->cover && file_exists(public_path('image/anak/' . $this->cover))) {
-            return unlink(public_path('image/anak/' . $this->cover));
+        if ($this->cover && file_exists(public_path('image/anaks/' . $this->cover))) {
+            return unlink(public_path('image/anaks/' . $this->cover));
         }
-
     }
 }

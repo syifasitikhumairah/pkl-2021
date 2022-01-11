@@ -23,7 +23,7 @@
                   <li><a href="#">Deep Drop Down 5</a></li>
                 </ul>
               </li> -->
-              <li><a href="#">Donasi Sekarang</a></li>
+              <li><a href="tampilan.donasi">Donasi Sekarang</a></li>
               <li><a href="#">Konfirmasi Donasi</a></li>
             </ul>
           </li>

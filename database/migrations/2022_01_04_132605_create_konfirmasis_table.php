@@ -17,7 +17,7 @@ class CreateKonfirmasisTable extends Migration
             $table->id();
             $table->bigInteger('id_donasi')->unsigned();
             $table->string('nm_donatur');
-            $table->string('cover')->nullabel();
+            // $table->string('cover')->nullabel();
             // fk id_donatur
             $table->foreign('id_donasi')->references('id')
                 ->on('donasis')->onUpdate('cascade')

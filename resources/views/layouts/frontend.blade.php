@@ -54,7 +54,7 @@
   </section> -->
 
   <!-- ======= Header ======= -->
-  @include('tampilan.header')
+  @include('layouts.partials.header')
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
@@ -497,8 +497,8 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
+                <h4>Lokasi:</h4>
+                <p>Jalan Cibaduyut Komplek, Jl. Sauyunan I No.14, Kb. Lega, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40235</p>
               </div>
 
               <div class="email">
@@ -513,7 +513,7 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
                 <p>+1 5589 55488 55s</p>
               </div>
 
-              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15842.064493496442!2d107.5897139!3d-6.9482801!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x97fcf9962a3ed151!2sPanti%20Yatim%20Indonesia%20(Pyi)%20-%20Kantor%20Pelayanan%20Donasi!5e0!3m2!1sid!2sid!4v1641885528254!5m2!1sid!2sid" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
           </div>
@@ -555,7 +555,7 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  @include('tampilan.footer')
+  @include('layouts.partials.footer')
   <!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
