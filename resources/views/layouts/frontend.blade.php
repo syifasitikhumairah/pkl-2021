@@ -134,9 +134,10 @@ sumberdaya manusia berdasarkan pemberdayaan.
             </p><br>
             <h3>MISI</h3>
             <p>
-            Mengorganisasi sumber daya dan melakukan pemberdayaan potensi umat untuk kesejahteraan kemanusiaan, pendidikan, kesehatan dan dakwah
-Mengoptimalisasi pengelolaan dana ziswaf (zakat, infaq, sedekah) dan kemanusiaan sesuai syari’at islam dan undang-undang yang berlaku
-Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan jaringan filantropi Nasional dan Internasional.
+            Mengorganisasi sumber daya dan melakukan pemberdayaan potensi umat untuk kesejahteraan kemanusiaan, 
+            pendidikan, kesehatan dan dakwah. Mengoptimalisasi pengelolaan dana ziswaf (zakat, infaq, sedekah) dan 
+            kemanusiaan sesuai syari’at islam dan undang-undang yang berlaku. Bersinergi membangun program pemberdayaan 
+            dan pendayagunaan dengan menguatkan jaringan filantropi Nasional dan Internasional.
             </p>
           </div>
         </div>
@@ -214,7 +215,9 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
     <!-- ======= Services Section ======= -->
     <section id="services" class="services">
       <div class="container">
-        <div class="section-title">
+      <div class="section-title">
+          <h2>Kegiatan</h2>
+        </div>
         <div class="row row-cols-1 row-cols-md-3 g-4">
     <div class="col">
       <div class="card h-100">
@@ -254,17 +257,22 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
 </div>
     </section><!-- End Services Section -->
 
+    
+
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
       <div class="container">
 
         <div class="row">
           <div class="col-lg-9 text-center text-lg-start">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <h3>قُلْ اِنَّ رَبِّيْ يَبْسُطُ الرِّزْقَ لِمَنْ يَّشَاۤءُ مِنْ عِبَادِهٖ وَيَقْدِرُ لَهٗ ۗوَمَآ اَنْفَقْتُمْ
+              <br> مِّنْ شَيْءٍ فَهُوَ يُخْلِفُهٗ ۚوَهُوَ خَيْرُ الرّٰزِقِيْنَ</h3>
+            <p>Katakanlah, “Sungguh, Tuhanku melapangkan rezeki dan membatasinya bagi siapa yang Dia kehendaki di antara hamba-hamba-Nya.” 
+              Dan apa saja yang kamu infakkan, Allah akan menggantinya dan Dialah pemberi rezeki yang terbaik. 
+              <br>(Q.S. Saba : 39)</p>
           </div>
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
+            <a class="cta-btn align-middle" href="">DONASI</a>
           </div>
         </div>
 
@@ -276,136 +284,134 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
       <div class="container">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Galeri foto</h2>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
           <div class="col-lg-12 d-flex justify-content-center">
-            <!-- <ul id="portfolio-flters">
+            <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
               <li data-filter=".filter-app">App</li>
               <li data-filter=".filter-card">Card</li>
               <li data-filter=".filter-web">Web</li>
-            </ul> -->
+            </ul>
           </div>
-        </div>
+        </div> -->
 
         <div class="row portfolio-container">
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po1.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Penyaluran Bansos</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po1.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Penyaluran Bansos"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
+            </div>
             </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po2.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>Tahfidz</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tahfidz"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po3.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
+                <h4>Kunjungan</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Kunjungan"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po4.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
+                <h4>Camping</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Camping"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po5.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
+                <h4>Pembagian Zakat</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pembagian Zakat"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po6.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
+                <h4>Tahfidz</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po6.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Tahfidz"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po7.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>Pembagian Sembako</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po7.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pembagian Sembako"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
-              </div>
             </div>
+          </div>
           </div>
 
           <div class="col-lg-4 col-md-6 portfolio-item">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="assets/img/portfolio/po8.jpeg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Pembagian Sembako</h4>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                  <a href="assets/img/portfolio/po8.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pembagian Sembako"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
+                </div>
+            </div>
+          </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/po9.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Pembagian Sembako</h4>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/po9.jpeg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Pembagian Sembako"><i class="bx bx-plus"></i></a>
+                  <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                 </div>
               </div>
             </div>
@@ -417,7 +423,7 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
     </section><!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <!-- <section id="team" class="team section-bg">
       <div class="container">
 
         <div class="section-title">
@@ -480,20 +486,19 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
         </div>
 
       </div>
-    </section><!-- End Team Section -->
+    </section>End Team Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Kontak</h2>
         </div>
 
         <div class="row">
 
-          <div class="col-lg-5 d-flex align-items-stretch">
+          <div class="col-lg-12 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
@@ -504,13 +509,13 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>pantiasuhan@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <h4>Telepon:</h4>
+                <p>+62 8983529947</p>
               </div>
 
               <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15842.064493496442!2d107.5897139!3d-6.9482801!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x97fcf9962a3ed151!2sPanti%20Yatim%20Indonesia%20(Pyi)%20-%20Kantor%20Pelayanan%20Donasi!5e0!3m2!1sid!2sid!4v1641885528254!5m2!1sid!2sid" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
@@ -518,7 +523,7 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
 
           </div>
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
               <div class="row">
                 <div class="form-group col-md-6">
@@ -545,7 +550,7 @@ Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan ja
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
-          </div>
+          </div> -->
 
         </div>
 

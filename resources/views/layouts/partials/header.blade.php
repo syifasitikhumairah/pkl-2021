@@ -27,6 +27,7 @@
               <li><a href="#">Konfirmasi Donasi</a></li>
             </ul>
           </li>
+          <li><a class="nav-link scrollto " href="#contact">Kontak<i class="bi bi-telephone"></i></a></li>
           <li class="dropdown "><a href="#"><span>Login</span> <i class="bi bi-box-arrow-in-right"></i></a>
             <ul>
               <li><a class="getstarted scrollto" href="{{ route('login') }}">Login sebagai Admin</a></li>
