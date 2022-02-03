@@ -49,8 +49,6 @@ class DataAnakController extends Controller
             'jk' => 'required',
             'pendidikan' => 'required',
             'nm_wali' => 'required',
-            'alamat' => 'required',
-            'cover'=>'required|image|max:2048',
         ]);
 
         $data_anak = new DataAnak;
@@ -60,18 +58,14 @@ class DataAnakController extends Controller
         $data_anak->jk = $request->jk;
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
-        $data_anak->alamat = $request->alamat;
-        // upload image / foto
-        if ($request->hasFile('cover')) {
-            $image = $request->file('cover');
-            $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('image/anaks/', $name);
-            $data_anak->cover = $name;
-        }
         $data_anak->save();
+        Session::flash("flash_notification", [
+            "level" => "succes",
+            "message" => "Data saved successfully",
+        ]);
         return redirect()->route('data_anak.index');
     }
-  
+
     /**
      * Display the specified resource.
      *
@@ -115,7 +109,6 @@ class DataAnakController extends Controller
             'jk' => 'required',
             'pendidikan' => 'required',
             'nm_wali' => 'required',
-            'alamat' => 'required',
         ]);
 
         $data_anak = DataAnak::findOrFail($id);
@@ -125,16 +118,11 @@ class DataAnakController extends Controller
         $data_anak->jk = $request->jk;
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
-        $data_anak->alamat = $request->alamat;
-        // upload image / foto
-        if ($request->hasFile('cover')) {
-            $data_anak->deleteImage();
-            $image = $request->file('cover');
-            $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('image/anaks/', $name);
-            $data_anak->cover = $name;
-        }
         $data_anak->save();
+        Session::flash("flash_notification", [
+            "level" => "succes",
+            "message" => "Data edited successfully",
+        ]);
         return redirect()->route('data_anak.index');
 
     }
@@ -150,8 +138,8 @@ class DataAnakController extends Controller
         //
         if(!DataAnak::destroy($id)) return redirect()->back();
         Session::flash("flash_notification", [
-            "level"=>"succes",
-            "message"=>"Barang berhasil dihapus"
+            "level" => "succes",
+            "message" => "Data deleted successfully"
         ]);
         return redirect()->route('data_anak.index');
     }

@@ -16,13 +16,12 @@ class CreateDonasisTable extends Migration
         Schema::create('donasis', function (Blueprint $table) {
             $table->id();
             $table->string('nm_donatur');
-            $table->bigInteger('nominal')->unsigned();
-            $table->date('tanggal');
-            $table->bigInteger('norek')->unsigned();
-            $table->string('nm_bank');
-            $table->string('pemilik_rek');
+            $table->string('email');
             $table->char('telepon');
+            $table->date('tanggal');
+            $table->bigInteger('nominal')->unsigned();
             $table->string('keterangan');
+            $table->string('cover')->nullable();
             $table->timestamps();
         });
     }

@@ -81,24 +81,6 @@ Edit Data Anak Asuh
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Alamat</label>
-                            <input type="text" name="alamat" value="{{$data_anak->alamat}}" class="form-control @error('alamat') is-invalid @enderror">
-                             @error('alamat')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="">Masukkan Foto</label>
-                            <input type="number" name="cover" value="{{$data_anak->cover}}" class="form-control @error('telepon') is-invalid @enderror">
-                             @error('cover')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>
                         </div>

@@ -39,14 +39,6 @@ Menampilkan Data Anak Asuh
                             <label for="">Nama Wali</label>
                             <input type="text" name="nm_wali" value="{{$data_anak->nm_wali}}" class="form-control"readonly>
                         </div>
-                        <div class="form-group">
-                            <label for="">Alamat</label>
-                            <input type="text" name="alamat" value="{{$data_anak->alamat}}" class="form-control" readonly>
-                        </div>
-                        <div class="form-group">
-                            <label for="">Foto</label>
-                            <input type="file" name="cover" value="{{$data_anak->cover}}" class="form-control" readonly>
-                        </div>
                     <div class="form-group">
                         <a href="{{url('admin/data_anak')}}" class="btn btn-block btn-outline-primary">Kembali</a>
                     </div>

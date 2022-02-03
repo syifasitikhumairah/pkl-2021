@@ -20,12 +20,12 @@ Menampilkan Data Kegiatan
                             <input type="text" name="judul" value="{{$kegiatan->judul}}" class="form-control" readonly>
                         </div>
                         <div class="form-group">
-                            <label for="">Foto</label>
-                            <input type="file" name="cover" value="{{$kegiatan->cover}}" class="form-control" readonly>
-                        </div>
-                        <div class="form-group">
                             <label for="">Tanggal</label>
                             <input type="text" name="tanggal" value="{{$kegiatan->tanggal}}" class="form-control" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label for="">Foto</label>
+                            <input type="file" name="cover" value="{{$kegiatan->cover}}" class="form-control" readonly>
                         </div>
                     <div class="form-group">
                         <a href="{{url('admin/data_kegiatan')}}" class="btn btn-block btn-outline-primary">Kembali</a>

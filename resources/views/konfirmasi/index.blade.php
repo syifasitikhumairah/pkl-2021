@@ -14,8 +14,8 @@ Data Konfirmasi Donasi
         <div class="col-md-12">
             <div class="card">
                 <div class="card-header">
-                    Donasi
-                    <a href="{{route('konfirmasi.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Donasi</a>
+                    Konfirmasi Donasi
+                    <a href="{{route('konfirmasi.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Konfirmasi Donasi</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -36,7 +36,7 @@ Data Konfirmasi Donasi
                                     <form action="{{route('konfirmasi.destroy',$data->id)}}" method="post">
                                         @method('delete')
                                         @csrf
-                                        <a href="{{route('konfirmasi.edit',$data->id)}}" class="btn btn-outline-info">Edit</a>
+                                        <!-- <a href="{{route('konfirmasi.edit',$data->id)}}" class="btn btn-outline-info">Edit</a> -->
                                         <a href="{{route('konfirmasi.show',$data->id)}}" class="btn btn-outline-warning">Show</a>
                                         <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapus ini?');">Delete</button>
                                     </form>

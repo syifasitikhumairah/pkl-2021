@@ -80,24 +80,6 @@ Tambah Data Anak Asuh
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Alamat</label>
-                            <textarea name="alamat" class="form-control @error('alamat') is-invalid @enderror"></textarea>
-                             @error('alamat')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="">Masukan Foto Anak</label>
-                            <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
-                             @error('cover')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>
                         </div>

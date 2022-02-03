@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+{{-- @extends('adminlte::page')
 
 @section('title', 'Pondok Yatim | Data Anak Asuh')
 
@@ -15,89 +15,72 @@ Edit Data Anak Asuh
             <div class="card">
                 <div class="card-header">Data Anak Asuh</div>
                 <div class="card-body">
-                   <form action="{{route('data_anak.update',$data_anak->id)}}" method="post">
+                   <form action="{{route('data_anak.update',$donasi->id)}}" method="post">
                         @csrf
                         @method('put')
                         <div class="form-group">
-                            <label for="">Masukan Nama Anak Asuh</label>
-                            <input type="text" name="nm_anak" value="{{$data_anak->nm_anak}}" class="form-control @error('nm_anak') is-invalid @enderror">
-                             @error('nm_anak')
+                            <label for="">Nama Donatur</label>
+                            <input type="text" name="nm_donatur" value="{{$donasi->nm_anak}}" class="form-control @error('nm_donatur') is-invalid @enderror">
+                             @error('nm_donatur')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for=""> Masukkan Tempat Lahir</label>
-                            <input type="text" name="tempat_lahir" value="{{$data_anak->tempat_lahir}}" class="form-control @error('tempat_lahir') is-invalid @enderror">
-                             @error('tempat_lahir')
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="Rp. " value="{{$donasi->email}}" class="form-control @error('email') is-invalid @enderror">
+                             @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukkan Tanggal Lahir</label>
-                            <input type="date" name="tgl_lahir" value="{{$data_anak->tgl_lahir}}" class="form-control @error('tgl_lahir') is-invalid @enderror">
-                             @error('tgl_lahir')
+                            <label for="">No Telepon</label>
+                            <input type="number" name="telepon" value="{{$donasi->telepon}}" class="form-control @error('telepon') is-invalid @enderror">
+                             @error('telepon')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Jenis Kelamin</label>
-                            <input type="radio" name="jk" value="Perempuan" > Perempuan
-                            <input type="radio" name="jk" value="Laki-laki" > Laki-laki
-                            @error('jk')
+                            <label for="">Tanggal</label>
+                            <input type="date" name="tanggal" value="{{$donasi->tanggal}}" class="form-control @error('tanggal') is-invalid @enderror">
+                             @error('tanggal')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Pendidikan</label>
-                            <select name="pendidikan" class="form-control @error('pendidikan') is-invalid @enderror" >
-                                    <option value="-">-</option>
-                                    <option value="Pra-TK">Pra-TK</option>
-                                    <option value="Pendidikan Anak Usia Dini">Pendidikan Anak Usia Dini</option>
-                                    <option value="Taman Kanak-kanak">Taman Kanak-kanak</option>
-                                    <option value="Sekolah Dasar">Sekolah Dasar</option>
-                                    <option value="Sekolah Menengah">Sekolah Menengah</option>
-                            </select>
-                            @error('pendidikan')
+                            <label for="">Nominal</label>
+                            <input type="number" name="nominal" placeholder="Rp. " value="{{$donasi->nominal}}" class="form-control @error('nominal') is-invalid @enderror">
+                             @error('nominal')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Nama Wali</label>
-                            <input type="text" name="nm_wali" value="{{$data_anak->nm_wali}}" class="form-control @error('nm_wali') is-invalid @enderror">
-                             @error('nm_wali')
+                            <label for="">Keterangan</label>
+                            <textarea name="keterangan" placeholder="(Pesan atau do'a yang akan disampaikan...)" value="{{$donasi->keterangan}}" class="form-control @error('keterangan') is-invalid @enderror"></textarea>
+                             @error('keterangan')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Alamat</label>
-                            <input type="text" name="alamat" value="{{$data_anak->alamat}}" class="form-control @error('alamat') is-invalid @enderror">
-                             @error('alamat')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <!-- <div class="form-group">
-                            <label for="">Masukkan Foto</label>
-                            <input type="number" name="cover" value="{{$data_anak->cover}}" class="form-control @error('telepon') is-invalid @enderror">
+                            <label for="">Foto Bukti Transfer</label>
+                            <input type="file" name="cover" value="{{$donasi->cover}}" class="form-control @error('cover') is-invalid @enderror">
                              @error('cover')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div> -->
+                        </div>
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>
@@ -116,4 +99,4 @@ Edit Data Anak Asuh
 
 @section('js')
 
-@endsection
+@endsection --}}

@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataAnakController;
 use App\Http\Controllers\DataKegiatanController;
 use App\Http\Controllers\DonasiController;
-use App\Http\Controllers\DataDonasiController;
 use App\Http\Controllers\KonfirmasiController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,14 +17,6 @@ use App\Http\Controllers\KonfirmasiController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('layouts.frontend');
-});
-
-Route::get('/dns', function () {
-    return view('tampilan.donasi');
-});
 
 Auth::routes(
     [
@@ -45,17 +37,6 @@ Route::group(['prefix' => 'admin','middleware' => ['auth','role:admin']], functi
     });
 });
 
-//hanya untuk role pengguna
-Route::group(['prefix' => 'pengguna','middleware' => ['auth','role:pengguna']], function(){
-    Route::get('/', function(){
-        return 'halaman pengguna';
-    });
-
-    Route::get('profile', function(){
-        return 'halaman profile pengguna';
-    });
-});
-
 // Route menampilkan fitur Data Anak, Data Kegiatan, dan Data Donasi
 Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
     Route::get('data_anak', function(){
@@ -72,10 +53,23 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
 
     Route::resource('data_anak', DataAnakController::class);
     Route::resource('data_kegiatan', DataKegiatanController::class);
-    Route::resource('data_donasi', DataDonasiController::class);
     Route::resource('donasi', DonasiController::class);
-    Route::resource('konfirmasi', KonfirmasiController::class);
 
 });
- 
-    
+
+Route::get('/', function () {
+    return view('frontend.index');
+});
+
+Route::get('kegiatan', 'App\Http\Controllers\HomeController@kegiatannya', function () {
+    return view('frontend.kegiatan');
+});
+
+Route::get('donasi/create', 'App\Http\Controllers\HomeController@donasi', function () {
+    return view('frontend.donasi');
+})->name('createDonasi');
+
+Route::post('donasi', 'App\Http\Controllers\HomeController@storeDonasi', function(){
+    return view('frontend.donasi');
+})->name('storeDonasi');
+

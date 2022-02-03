@@ -1,4 +1,4 @@
-@extends('adminlte::page')
+{{-- @extends('adminlte::page')
 
 @section('title', 'Pondok Yatim | Donasi')
 
@@ -18,7 +18,7 @@ Tambah Donasi
                    <form action="{{route('donasi.store')}}" method="post">
                         @csrf
                         <div class="form-group">
-                            <label for="">Masukkan Nama Donatur</label>
+                            <label for="">Nama Donatur</label>
                             <input type="text" name="nm_donatur" class="form-control @error('nm_donatur') is-invalid @enderror">
                              @error('nm_donatur')
                                 <span class="invalid-feedback" role="alert">
@@ -27,9 +27,18 @@ Tambah Donasi
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for=""> Masukkan Nominal</label>
-                            <input type="number" name="nominal" placeholder="Rp. " class="form-control @error('nominal') is-invalid @enderror">
-                             @error('nominal')
+                            <label for="">Email</label>
+                            <input type="email" name="email" placeholder="Rp. " class="form-control @error('email') is-invalid @enderror">
+                             @error('email')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="">No Telepon</label>
+                            <input type="number" name="telepon" class="form-control @error('telepon') is-invalid @enderror">
+                             @error('telepon')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -45,50 +54,27 @@ Tambah Donasi
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for=""> Masukkan Nomor Rekening</label>
-                            <input type="number" name="norek"  class="form-control @error('norek') is-invalid @enderror">
-                             @error('norek')
+                            <label for="">Nominal</label>
+                            <input type="number" name="nominal" placeholder="Rp. " class="form-control @error('nominal') is-invalid @enderror">
+                             @error('nominal')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukan Nama Bank</label>
-                            <select name="nm_bank" class="form-control @error('nm_bank') is-invalid @enderror" >
-                                    <option value="BCA">BCA</option>
-                                    <option value="BRI">BRI</option>
-                                    <option value="Mandiri">Mandiri</option>
-                                    <option value="BSI">BSI</option>
-                            </select>
-                             @error('nm_bank')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="">Masukkan Pemilik Rekening</label>
-                            <input type="text" name="pemilik_rek" class="form-control @error('pemilik_rek') is-invalid @enderror">
-                             @error('pemilik_rek')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="">Masukkan Nomor Telepon</label>
-                            <input type="number" name="telepon" placeholder="+62 "class="form-control @error('telepon') is-invalid @enderror">
-                             @error('telepon')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
-                            <label for="">Masukkan Keterangan</label>
-                            <input type="text" name="keterangan" placeholder="(Pesan atau do'a yang akan disampaikan...)" class="form-control @error('keterangan') is-invalid @enderror">
+                            <label for="">Keterangan</label>
+                            <textarea name="keterangan" placeholder="(Pesan atau do'a yang akan disampaikan...)" class="form-control @error('keterangan') is-invalid @enderror"></textarea>
                              @error('keterangan')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <label for="">Foto Bukti Transfer</label>
+                            <input type="file" name="cover" class="form-control @error('cover') is-invalid @enderror">
+                             @error('cover')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
@@ -113,4 +99,4 @@ Tambah Donasi
 
 @section('js')
 
-@endsection
+@endsection --}}

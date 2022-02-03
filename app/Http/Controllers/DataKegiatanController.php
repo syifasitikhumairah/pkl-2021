@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\DataKegiatan;
 use Illuminate\Http\Request;
+use Session;
 
 class DataKegiatanController extends Controller
 {
@@ -43,8 +44,9 @@ class DataKegiatanController extends Controller
         // validasi data
         $validated = $request->validate([
             'judul' => 'required',
-            'cover' => 'required|image|max:2048',
             'tanggal' => 'required',
+            'cover' => 'required|image|max:2048',
+
         ]);
 
         $kegiatan = new DataKegiatan;
@@ -58,6 +60,10 @@ class DataKegiatanController extends Controller
         }
         $kegiatan->tanggal = $request->tanggal;
         $kegiatan->save();
+        Session::flash("flash_notification", [
+            "level" => "succes",
+            "message" => "Data saved successfully",
+        ]);
         return redirect()->route('data_kegiatan.index');
     }
 
@@ -100,10 +106,12 @@ class DataKegiatanController extends Controller
         $validated = $request->validate([
             'judul' => 'required',
             'tanggal' => 'required',
+            'cover' => 'required|image|max:2048'
         ]);
 
         $kegiatan = DataKegiatan::findOrFail($id);
         $kegiatan->judul = $request->judul;
+        $kegiatan->tanggal = $request->tanggal;
         // upload image / foto
         if ($request->hasFile('cover')) {
             $book->deleteImage();
@@ -112,8 +120,11 @@ class DataKegiatanController extends Controller
             $image->move('image/kegiatan/', $name);
             $kegiatan->cover = $name;
         }
-        $kegiatan->tanggal = $request->tanggal;
         $kegiatan->save();
+        Session::flash("flash_notification", [
+            "level" => "succes",
+            "message" => "Data edited successfully",
+        ]);
         return redirect()->route('data_kegiatan.index');
     }
 
@@ -128,8 +139,8 @@ class DataKegiatanController extends Controller
         //
         if(!DataKegiatan::destroy($id)) return redirect()->back();
         Session::flash("flash_notification", [
-            "level"=>"succes",
-            "message"=>"Barang berhasil dihapus"
+            "level" => "succes",
+            "message" => "Data deleted successfully",
         ]);
         return redirect()->route('data_kegiatan.index');
     }

@@ -21,8 +21,6 @@ class CreateDataAnaksTable extends Migration
             $table->string('jk');
             $table->string('pendidikan');
             $table->string('nm_wali');
-            $table->string('alamat');
-            $table->string('cover')->nullable();
             $table->timestamps();
         });
     }

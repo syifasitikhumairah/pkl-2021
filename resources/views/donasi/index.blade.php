@@ -15,7 +15,6 @@ Data Donasi
             <div class="card">
                 <div class="card-header">
                     Donasi
-                    <a href="{{route('donasi.create')}}" class="btn btn-sm btn-outline-primary float-right">Tambah Donasi</a>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -23,13 +22,12 @@ Data Donasi
                             <tr>
                                 <th>No</th>
                                 <th>Nama Donatur</th>
-                                <th>Nominal</th>
-                                <th>Tanggal</th>
-                                <th>Norek</th>
-                                <th>Nama Bank</th>
-                                <th>Pemilik Rek</th>
+                                <th>Email</th>
                                 <th>Telepon</th>
+                                <th>Tanggal</th></th>
+                                <th>Nominal</th>
                                 <th>Keterangan</th>
+                                <th>Bukti</th>
                                 <th>Aksi</th>
                             </tr>
                             @php $no=1; @endphp
@@ -37,18 +35,16 @@ Data Donasi
                             <tr>
                                 <td>{{$no++}}</td>
                                 <td>{{$data->nm_donatur}}</td>
-                                <td>Rp.{{number_format ($data->nominal)}}</td>
-                                <td>{{$data->tanggal}}</td>
-                                <td>{{$data->norek}}</td>
-                                <td>{{$data->nm_bank}}</td>
-                                <td>{{$data->pemilik_rek}}</td>
+                                <td>{{$data->email}}</td>
                                 <td>{{$data->telepon}}</td>
+                                <td>{{$data->tanggal}}</td>
+                                <td>Rp.{{number_format ($data->nominal)}}</td>
                                 <td>{{$data->keterangan}}</td>
+                                <td><img src="{{ $data->image()}}" style="width:420px; height:320px;" alt="..."></td>
                                 <td>
                                     <form action="{{route('donasi.destroy',$data->id)}}" method="post">
                                         @method('delete')
                                         @csrf
-                                        <a href="{{route('donasi.edit',$data->id)}}" class="btn btn-outline-info">Edit</a>
                                         <a href="{{route('donasi.show',$data->id)}}" class="btn btn-outline-warning">Show</a>
                                         <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Apakah anda yakin menghapus ini?');">Delete</button>
                                     </form>

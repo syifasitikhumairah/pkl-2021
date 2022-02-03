@@ -9,10 +9,10 @@ class DataKegiatan extends Model
 {
     use HasFactory;
     //memberikan akses data apa saja yang bisa dilihat
-    protected $visible=['judul','cover','tanggal'];
+    protected $visible=['judul','tanggal','cover'];
 
     //memberikan akses dat apa saja yang bisa diisi
-    protected $fillable=['judul','cover','tanggal'];
+    protected $fillable=['judul','tanggal','cover'];
 
     //mencatat waktu pembuatan dan update data otomatis
     public $timestamps=true;

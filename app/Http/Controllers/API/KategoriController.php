@@ -4,6 +4,8 @@ namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
 use App\Models\DataAnak;
+use App\Models\DataKegiatan;
+use App\Models\Donasi;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -20,6 +22,20 @@ class KategoriController extends Controller
             'success' => true,
             'message' => 'Data Anak',
             'data' => $data_anak,
+        ], 200);
+
+        $kegiatan = DataKegiatan::all();
+        return response ()->json([
+            'success' => true,
+            'message' => 'Data Kegiatan',
+            'data' => $kegiatan,
+        ], 200);
+
+        $donasi = Donasi::all();
+        return response ()->json([
+            'success' => true,
+            'message' => 'Data Donasi',
+            'data' => $donasi,
         ], 200);
     }
 

@@ -28,15 +28,6 @@ Edit Data Kegiatan
                             @enderror
                         </div>
                         <div class="form-group">
-                            <label for="">Masukkan Foto</label>
-                            <input type="number" name="cover" value="{{$kegiatan->cover}}" class="form-control @error('telepon') is-invalid @enderror">
-                             @error('cover')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                        </div>
-                        <div class="form-group">
                             <label for="">Tanggal</label>
                             <input type="date" name="tanggal" value="{{$kegiatan->tanggal}}" class="form-control @error('tanggal') is-invalid @enderror">
                              @error('tanggal')
@@ -45,6 +36,16 @@ Edit Data Kegiatan
                                 </span>
                             @enderror
                         </div>
+                        <div class="form-group">
+                            <label for="">Masukkan Foto</label>
+                            <input type="number" name="cover" value="{{$kegiatan->cover}}" class="form-control @error('telepon') is-invalid @enderror">
+                             @error('cover')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                            @enderror
+                        </div>
+                        
                         <div class="form-group">
                             <button type="reset" class="btn btn-outline-warning">Reset</button>
                             <button type="submit" class="btn btn-outline-primary">Simpan</button>

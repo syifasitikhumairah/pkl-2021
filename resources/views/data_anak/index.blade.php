@@ -28,8 +28,6 @@ Data Anak Asuh
                                 <th>Jenis Kelamin</th>
                                 <th>Pendidikan</th>
                                 <th>Nama Wali</th>
-                                <th>Alamat</th>
-                                <th>Foto</th>
                                 <th>Aksi</th>
                             </tr>
                             @php $no=1; @endphp
@@ -42,8 +40,6 @@ Data Anak Asuh
                                 <td>{{$data->jk}}</td>
                                 <td>{{$data->pendidikan}}</td>
                                 <td>{{$data->nm_wali}}</td>
-                                <td>{{$data->alamat}}</td>
-                                <td><img src="{{$data->image()}}" alt="" style="width:150px; height:150px;" alt=""></td>
                                 <td>
                                     <form action="{{route('data_anak.destroy',$data->id)}}" method="post">
                                         @method('delete')
