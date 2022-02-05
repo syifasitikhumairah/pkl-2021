@@ -114,7 +114,7 @@ class DataKegiatanController extends Controller
         $kegiatan->tanggal = $request->tanggal;
         // upload image / foto
         if ($request->hasFile('cover')) {
-            $book->deleteImage();
+            $kegiatan->deleteImage();
             $image = $request->file('cover');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
             $image->move('image/kegiatan/', $name);

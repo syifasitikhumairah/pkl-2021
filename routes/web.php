@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataAnakController;
 use App\Http\Controllers\DataKegiatanController;
 use App\Http\Controllers\DonasiController;
-use App\Http\Controllers\KonfirmasiController;
 use App\Http\Controllers\HomeController;
 
 /*
@@ -61,6 +60,10 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
+Route::get('rekening', function () {
+    return view('frontend.rekening');
+});
+
 Route::get('kegiatan', 'App\Http\Controllers\HomeController@kegiatannya', function () {
     return view('frontend.kegiatan');
 });
@@ -69,7 +72,5 @@ Route::get('donasi/create', 'App\Http\Controllers\HomeController@donasi', functi
     return view('frontend.donasi');
 })->name('createDonasi');
 
-Route::post('donasi', 'App\Http\Controllers\HomeController@storeDonasi', function(){
-    return view('frontend.donasi');
-})->name('storeDonasi');
+Route::post('donasi', [App\Http\Controllers\HomeController::class, 'storeDonasi'])->name('storeDonasi');
 

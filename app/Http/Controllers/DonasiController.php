@@ -58,7 +58,7 @@ class DonasiController extends Controller
     //    if ($request->hasFile('cover')) {
     //     $image = $request->file('cover');
     //     $name = rand(1000, 9999) . $image->getClientOriginalName();
-    //     $image->move('image/bukti/', $name);
+    //     $image->move('image/donasi/', $name);
     //     $donasi->cover = $name;
     //     }
 
@@ -78,9 +78,9 @@ class DonasiController extends Controller
      */
     public function show($id)
     {
-        //
-        // $donasi = Donasi::findOrFail($id);
-        // return view('donasi.show', compact('donasi'));
+
+        $donasi = Donasi::findOrFail($id);
+        return view('donasi.show', compact('donasi'));
     }
 
     /**
@@ -128,7 +128,7 @@ class DonasiController extends Controller
     //    if ($request->hasFile('cover')) {
     //     $image = $request->file('cover');
     //     $name = rand(1000, 9999) . $image->getClientOriginalName();
-    //     $image->move('image/bukti/', $name);
+    //     $image->move('image/donasi/', $name);
     //     $donasi->cover = $name;
     //     }
     //     $donasi->save();

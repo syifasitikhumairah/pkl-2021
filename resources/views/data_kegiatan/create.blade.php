@@ -15,7 +15,7 @@ Tambah Data Kegiatan
             <div class="card">
                 <div class="card-header">Data Kegiatan</div>
                 <div class="card-body">
-                   <form action="{{route('data_kegiatan.store')}}" method="post">
+                   <form action="{{route('data_kegiatan.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label for="">Masukan Judul Kegiatan</label>

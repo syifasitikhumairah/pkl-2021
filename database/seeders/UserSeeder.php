@@ -57,19 +57,12 @@ class UserSeeder extends Seeder
         ]);
 
         $user = new User();
-        $user->name = 'Syifa Siti Khumairah';
+        $user->name = 'Account Admin';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('12345678');
         $user->save();
 
-        $pengunjung = new User();
-        $pengunjung->name = 'Pengunjung';
-        $pengunjung->email = 'pengunjung@gmail.com';
-        $pengunjung->password = Hash::make('12345');
-        $pengunjung->save();
-
         $user->attachRole($admin);
-        $pengunjung->attachRole($pengguna);
 
     }
 }

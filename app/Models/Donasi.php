@@ -20,7 +20,7 @@ class Donasi extends Model
         if ($this->cover && file_exists(public_path('image/donasi/' . $this->cover))) {
             return asset('image/donasi/' . $this->cover);
         } else {
-            return asset('image/no_image.png');
+            return asset('image/no_image');
         }
     }
 
