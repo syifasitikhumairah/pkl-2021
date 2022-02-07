@@ -90,7 +90,7 @@
                                 </div>
                                 <br>
                                 <div class="form-group text-center">
-                                    <button type="submit" class="btn btn-outline-primary">Kirim</button>
+                                    <button type="submit" class="btn btn-outline-primary">KIRIM</button>
                                 </div>
                             </form>
                         </div>

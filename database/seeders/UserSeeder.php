@@ -51,13 +51,8 @@ class UserSeeder extends Seeder
             'display_name' => 'User Administrator'
         ]);
 
-        $pengguna = Role::create([
-            'name' => 'pengguna',
-            'display_name' => 'User Biasa'
-        ]);
-
         $user = new User();
-        $user->name = 'Account Admin';
+        $user->name = 'Admin Account';
         $user->email = 'admin@gmail.com';
         $user->password = Hash::make('12345678');
         $user->save();

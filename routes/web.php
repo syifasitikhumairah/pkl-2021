@@ -64,6 +64,10 @@ Route::get('rekening', function () {
     return view('frontend.rekening');
 });
 
+Route::get('ucapan', function () {
+    return view('frontend.ucapan');
+});
+
 Route::get('kegiatan', 'App\Http\Controllers\HomeController@kegiatannya', function () {
     return view('frontend.kegiatan');
 });

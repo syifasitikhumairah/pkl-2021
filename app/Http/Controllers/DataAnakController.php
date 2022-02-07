@@ -103,7 +103,7 @@ class DataAnakController extends Controller
     {
         // validasi data
         $validated = $request->validate([
-            'nm_anak' => 'required',
+            'nm_anak' => 'required|alpha',
             'tempat_lahir' => 'required',
             'tgl_lahir' => 'required',
             'jk' => 'required',

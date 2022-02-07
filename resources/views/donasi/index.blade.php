@@ -8,6 +8,19 @@
 
 @endsection
 
+@section('css')
+    <link rel="stylesheet" href="{{ asset('DataTables/datatables.min.css') }}">
+@endsection
+
+@section('js')
+    <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
+@endsection
+
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
@@ -39,7 +52,7 @@
                                         <td>{{ $data->email }}</td>
                                         <td>{{ $data->telepon }}</td>
                                         <td>{{ $data->tanggal }}</td>
-                                        <td>Rp.{{ number_format($data->nominal) }}</td>
+                                        <td>Rp. {{ number_format($data->nominal) }}</td>
                                         <td>{{ $data->keterangan }}</td>
                                         <td><img src="{{ $data->image() }}" style="width:200px; height:200px;" alt="...">
                                         </td>
@@ -62,12 +75,4 @@
             </div>
         </div>
     </div>
-@endsection
-
-@section('css')
-
-@endsection
-
-@section('js')
-
 @endsection
