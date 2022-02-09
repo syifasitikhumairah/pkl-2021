@@ -46,11 +46,13 @@ class DataKegiatanController extends Controller
             'judul' => 'required',
             'tanggal' => 'required',
             'cover' => 'required|image|max:2048',
+            'keterangan' => 'required',
 
         ]);
 
         $kegiatan = new DataKegiatan;
         $kegiatan->judul = $request->judul;
+        $kegiatan->tanggal = $request->tanggal;
         // upload image
         if ($request->hasFile('cover')){
             $image = $request->file('cover');
@@ -58,7 +60,7 @@ class DataKegiatanController extends Controller
             $image->move('image/kegiatan/', $name);
             $kegiatan->cover = $name;
         }
-        $kegiatan->tanggal = $request->tanggal;
+        $kegiatan->keterangan = $request->keterangan;
         $kegiatan->save();
         Session::flash("flash_notification", [
             "level" => "succes",
@@ -106,7 +108,8 @@ class DataKegiatanController extends Controller
         $validated = $request->validate([
             'judul' => 'required',
             'tanggal' => 'required',
-            'cover' => 'required|image|max:2048'
+            'cover' => 'required|image|max:2048',
+            'keterangan' => 'required',
         ]);
 
         $kegiatan = DataKegiatan::findOrFail($id);
@@ -120,6 +123,7 @@ class DataKegiatanController extends Controller
             $image->move('image/kegiatan/', $name);
             $kegiatan->cover = $name;
         }
+        $kegiatan->keterangan = $request->keterangan;
         $kegiatan->save();
         Session::flash("flash_notification", [
             "level" => "succes",

@@ -20,7 +20,7 @@ class CreateDonasisTable extends Migration
             $table->char('telepon');
             $table->date('tanggal');
             $table->bigInteger('nominal')->unsigned();
-            $table->string('keterangan');
+            $table->string('keterangan')->nullable();
             $table->string('cover')->nullable();
             $table->timestamps();
         });

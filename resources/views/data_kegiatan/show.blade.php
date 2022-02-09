@@ -29,6 +29,11 @@
                             <img src="{{ $kegiatan->image() }}" alt="" style="width:150px; height:150px;" alt="Cover">
                         </div>
                         <div class="form-group">
+                            <label for="">Keterangan</label>
+                            <input type="text" name="tanggal" value="{{ $kegiatan->keterangan }}" class="form-control"
+                                readonly>
+                        </div>
+                        <div class="form-group">
                             <a href="{{ url('admin/data_kegiatan') }}"
                                 class="btn btn-block btn-outline-primary">Kembali</a>
                         </div>

@@ -54,7 +54,7 @@
                                         <td>{{ $data->tanggal }}</td>
                                         <td>Rp. {{ number_format($data->nominal) }}</td>
                                         <td>{{ $data->keterangan }}</td>
-                                        <td><img src="{{ $data->image() }}" style="width:200px; height:200px;" alt="...">
+                                        <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
                                         </td>
                                         <td>
                                             <form action="{{ route('donasi.destroy', $data->id) }}" method="post">

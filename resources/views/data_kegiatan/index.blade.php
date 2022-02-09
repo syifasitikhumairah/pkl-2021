@@ -39,6 +39,7 @@
                                     <th>Judul</th>
                                     <th>Tangal</th>
                                     <th>Foto</th>
+                                    <th>Keterangan</th>
                                     <th>Aksi</th>
                                 </tr>
                                 @php $no=1; @endphp
@@ -47,8 +48,9 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->judul }}</td>
                                         <td>{{ $data->tanggal }}</th>
-                                        <td><img src="{{ $data->image() }}" alt="" style="width:150px; height:150px;"
+                                        <td><img src="{{ $data->image() }}" alt="" style="width:150px; height:80px;"
                                                 alt="Cover"></td>
+                                        <td>{{ $data->keterangan }}</th>
                                         <td>
                                             <form action="{{ route('data_kegiatan.destroy', $data->id) }}" method="post">
                                                 @method('delete')

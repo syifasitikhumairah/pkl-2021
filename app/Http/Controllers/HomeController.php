@@ -41,11 +41,11 @@ class HomeController extends Controller
     {
         $validated = $request->validate([
             'nm_donatur' => 'required',
-            'email' => 'required',
+            'email' => 'required|email:dns',
             'telepon' => 'required',
             'tanggal' => 'required',
             'nominal' => 'required',
-            'keterangan' => 'required',
+
             'cover'=>'required|image|max:2048',
         ]);
 
@@ -55,7 +55,7 @@ class HomeController extends Controller
         $donasi->telepon = $request->telepon;
         $donasi->tanggal = $request->tanggal;
         $donasi->nominal = $request->nominal;
-        $donasi->keterangan = $request->keterangan;
+        $donasi->keterangan = $request->keterangan ;
        // upload image / foto
        if ($request->hasFile('cover')) {
         $image = $request->file('cover');

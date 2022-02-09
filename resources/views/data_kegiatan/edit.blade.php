@@ -49,6 +49,16 @@
                                     </span>
                                 @enderror
                             </div>
+                            <div class="form-group">
+                                <label for="">Keterangan</label>
+                                <input type="date" name="keterangan" value="{{ $kegiatan->keterangan }}"
+                                    class="form-control @error('keterangan') is-invalid @enderror">
+                                @error('keterangan')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
 
                             <div class="form-group">
                                 <button type="reset" class="btn btn-outline-warning">Reset</button>
