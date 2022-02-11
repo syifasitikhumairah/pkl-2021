@@ -64,6 +64,7 @@
         @yield('content')
     </section>
     <!-- /.content -->
+    
 
     <!-- ======= Footer ======= -->
     @include('layouts.partials.footer')
@@ -81,6 +82,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{ asset('assets/js/main.js') }}"></script>
+    @include('sweetalert::alert')
 
 </body>
 

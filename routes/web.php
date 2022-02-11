@@ -5,6 +5,7 @@ use App\Http\Controllers\DataAnakController;
 use App\Http\Controllers\DataKegiatanController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,17 +65,13 @@ Route::get('rekening', function () {
     return view('frontend.rekening');
 });
 
-Route::get('ucapan', function () {
-    return view('frontend.ucapan');
-});
-
-Route::get('kegiatan', 'App\Http\Controllers\HomeController@kegiatannya', function () {
+Route::get('kegiatan', 'App\Http\Controllers\FrontendController@kegiatannya', function () {
     return view('frontend.kegiatan');
 });
 
-Route::get('donasi/create', 'App\Http\Controllers\HomeController@donasi', function () {
+Route::get('donasi/create', 'App\Http\Controllers\FrontendController@donasi', function () {
     return view('frontend.donasi');
 })->name('createDonasi');
 
-Route::post('donasi', [App\Http\Controllers\HomeController::class, 'storeDonasi'])->name('storeDonasi');
+Route::post('donasi', [App\Http\Controllers\FrontendController::class, 'storeDonasi'])->name('storeDonasi');
 

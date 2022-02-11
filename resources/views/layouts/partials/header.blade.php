@@ -11,7 +11,7 @@
                 <li><a class="nav-link scrollto" href="/#about">Tentang Kami<i class=" bi bi-activity"></i></a></li>
                 <li><a class="nav-link scrollto" href="/kegiatan">Kegiatan<i class=" bi bi-calendar2"></i></a></li>
                 <li><a class="nav-link scrollto " href="/#portfolio">Galeri Foto<i class="bi bi-images"></i></a></li>
-                <li><a class="nav-link scrollto " href="{{ route('createDonasi') }}">Donasi sekarang</a>
+                <li><a class="nav-link scrollto " href="{{ route('createDonasi') }}">Donasi Sekarang<i class="bi bi-heart-fill"></i></a></li>
                 <li><a class="nav-link scrollto " href="/#contact">Kontak<i class="bi bi-telephone"></i></a></li>
                 <li class="dropdown"><a href=""><span>Login</span> <i class="bi bi-box-arrow-in-right"></i></a>
                     <ul>
@@ -19,7 +19,7 @@
                     </ul>
                 </li>
 
-                <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> -->
+                <!-- <li><a class="getstarted scrollto" href="#about">Get Started</a></li> bi bi-clipboard-heart-->
             </ul>
 
         </nav><!-- .navbar -->

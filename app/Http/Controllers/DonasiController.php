@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Donasi;
 use Illuminate\Http\Request;
 use Session;
+use Alert;
 
 class DonasiController extends Controller
 {
@@ -147,13 +148,11 @@ class DonasiController extends Controller
      */
     public function destroy($id)
     {
-        //
-        $donasi = Donasi::findOrFail($id);
-        $donasi->delete();
-        Session::flash("flash_notification", [
-            "level" => "succes",
-            "message" => "Data deleted successfully",
-        ]);
+
+        if (!Donasi::destroy($id)) {
+            return redirect()->back();
+        }
+        Alert::success('Sukses', 'Data Berhasil di Hapus');
         return redirect()->route('donasi.index');
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use Session;
 use App\Models\DataAnak;
 use Illuminate\Http\Request;
+use Alert;
 
 class DataAnakController extends Controller
 {
@@ -59,6 +60,7 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->save();
+        Alert::success('Sukses', 'Data Berhasil di Tambah');
         Session::flash("flash_notification", [
             "level" => "succes",
             "message" => "Data saved successfully",
@@ -103,7 +105,7 @@ class DataAnakController extends Controller
     {
         // validasi data
         $validated = $request->validate([
-            'nm_anak' => 'required|alpha',
+            'nm_anak' => 'required',
             'tempat_lahir' => 'required',
             'tgl_lahir' => 'required',
             'jk' => 'required',
@@ -119,6 +121,7 @@ class DataAnakController extends Controller
         $data_anak->pendidikan = $request->pendidikan;
         $data_anak->nm_wali = $request->nm_wali;
         $data_anak->save();
+        Alert::success('Sukses', 'Data Berhasil di Edit');
         Session::flash("flash_notification", [
             "level" => "succes",
             "message" => "Data edited successfully",
@@ -135,12 +138,11 @@ class DataAnakController extends Controller
      */
     public function destroy($id)
     {
-        //
-        if(!DataAnak::destroy($id)) return redirect()->back();
-        Session::flash("flash_notification", [
-            "level" => "succes",
-            "message" => "Data deleted successfully"
-        ]);
+
+        if (!DataAnak::destroy($id)) {
+            return redirect()->back();
+        }
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('data_anak.index');
     }
 }

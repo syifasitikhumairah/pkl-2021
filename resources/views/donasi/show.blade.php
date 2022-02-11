@@ -46,7 +46,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Foto</label><br>
-                            <img src="{{ $donasi->image() }}" alt="" style="width:150px; height:150px;" alt="Cover">
+                            <img src="{{ $donasi->image() }}" alt="" style="width:160px; height:300px;" alt="Cover">
                         </div>
                         <div class="form-group">
                             <a href="{{ url('admin/donasi') }}" class="btn btn-block btn-outline-primary">Kembali</a>

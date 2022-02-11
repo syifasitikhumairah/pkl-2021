@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\DataKegiatan;
 use Illuminate\Http\Request;
 use Session;
+use Alert;
 
 class DataKegiatanController extends Controller
 {
@@ -62,6 +63,7 @@ class DataKegiatanController extends Controller
         }
         $kegiatan->keterangan = $request->keterangan;
         $kegiatan->save();
+        Alert::success('Sukses', 'Data Berhasil Diisi');
         Session::flash("flash_notification", [
             "level" => "succes",
             "message" => "Data saved successfully",
@@ -125,6 +127,7 @@ class DataKegiatanController extends Controller
         }
         $kegiatan->keterangan = $request->keterangan;
         $kegiatan->save();
+        Alert::success('Sukses', 'Data Berhasil Diubah');
         Session::flash("flash_notification", [
             "level" => "succes",
             "message" => "Data edited successfully",
@@ -140,12 +143,11 @@ class DataKegiatanController extends Controller
      */
     public function destroy($id)
     {
-        //
-        if(!DataKegiatan::destroy($id)) return redirect()->back();
-        Session::flash("flash_notification", [
-            "level" => "succes",
-            "message" => "Data deleted successfully",
-        ]);
+
+        if (!DataKegiatan::destroy($id)) {
+            return redirect()->back();
+        }
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('data_kegiatan.index');
     }
 }

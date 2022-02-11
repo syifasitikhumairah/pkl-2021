@@ -42,7 +42,7 @@
                             <div class="form-group">
                                 <label for="">Masukkan Foto</label>
                                 <input type="file" name="cover" value="{{ $kegiatan->cover }}"
-                                    class="form-control @error('telepon') is-invalid @enderror">
+                                    class="form-control @error('cover') is-invalid @enderror">
                                 @error('cover')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -51,8 +51,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Keterangan</label>
-                                <input type="date" name="keterangan" value="{{ $kegiatan->keterangan }}"
-                                    class="form-control @error('keterangan') is-invalid @enderror">
+                                <textarea name="keterangan" value="{{ $kegiatan->keterangan }}"
+                                    class="form-control @error('keterangan') is-invalid @enderror"></textarea>
                                 @error('keterangan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

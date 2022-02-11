@@ -26,11 +26,11 @@
                         </div>
                         <div class="form-group">
                             <label for="">Foto</label><br>
-                            <img src="{{ $kegiatan->image() }}" alt="" style="width:150px; height:150px;" alt="Cover">
+                            <img src="{{ $kegiatan->image() }}" alt="" style="width:300px; height:160px;" alt="Cover">
                         </div>
                         <div class="form-group">
                             <label for="">Keterangan</label>
-                            <input type="text" name="tanggal" value="{{ $kegiatan->keterangan }}" class="form-control"
+                            <input type="text" name="keterangan" value="{{ $kegiatan->keterangan }}" class="form-control"
                                 readonly>
                         </div>
                         <div class="form-group">

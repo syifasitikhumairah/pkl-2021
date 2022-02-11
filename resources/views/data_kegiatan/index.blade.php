@@ -19,6 +19,27 @@
             $('#example').DataTable();
         });
     </script>
+    <script src="{{asset('js/sweetalert2.js')}}"></script>
+    <script>
+        $(".delete-confirm").click(function(event) {
+            var form = $(this).closest("form");
+            var name = $(this).data("name");
+            event.preventDefault();
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!",
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit();
+                }
+            });
+        });
+    </script>
 @endsection
 
 @section('content')
@@ -59,8 +80,8 @@
                                                     class="btn btn-outline-info">Edit</a>
                                                 <a href="{{ route('data_kegiatan.show', $data->id) }}"
                                                     class="btn btn-outline-warning">Show</a>
-                                                <button type="submit" class="btn btn-outline-danger"
-                                                    onclick="return confirm('Apakah anda yakin menghapus ini?');">Delete</button>
+                                                <button type="submit"
+                                                    class="btn btn-outline-danger delete-confirm">Delete</button>
                                             </form>
                                         </td>
                                     </tr>

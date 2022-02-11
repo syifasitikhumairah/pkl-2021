@@ -14,7 +14,7 @@
                             <h5 class="card-title"><b>{{ $data->judul }}</b></h5>
                         </div>
                         <div class="card-body">
-                            <p class="card-title"><b>{{ $data->keterangan }}</b></p>
+                            <p class="card-title">{{ $data->keterangan }}</p>
                         </div>
                         <div class="card-footer">
                             <small class="text-muted">{{ $data->tanggal }}</small>

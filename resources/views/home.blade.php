@@ -22,7 +22,7 @@
                     </center>
                 </p>
                 <p class="card-text">
-                    <center>Halaman ini hada dapat diakses oleh user admin.</center>
+                    <center>Halaman ini hanya dapat diakses oleh user admin.</center>
                 </p>
             </div>
         </div>

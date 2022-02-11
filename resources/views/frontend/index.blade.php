@@ -221,7 +221,7 @@
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po1.jpeg" data-gallery="portfolioGallery"
                                         class="portfolio-lightbox" title="Penyaluran Bansos"><i
-                                            class="bx bx-plus"></i></a>
+                                            class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -235,7 +235,7 @@
                                 <h4>Tahfidz</h4>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po2.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Tahfidz"><i class="bx bx-plus"></i></a>
+                                        class="portfolio-lightbox" title="Tahfidz"><i class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -249,7 +249,7 @@
                                 <h4>Kunjungan</h4>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po3.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Kunjungan"><i class="bx bx-plus"></i></a>
+                                        class="portfolio-lightbox" title="Kunjungan"><i class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -263,7 +263,7 @@
                                 <h4>Camping</h4>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po4.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Camping"><i class="bx bx-plus"></i></a>
+                                        class="portfolio-lightbox" title="Camping"><i class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -278,7 +278,7 @@
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po5.jpg" data-gallery="portfolioGallery"
                                         class="portfolio-lightbox" title="Pembagian Zakat"><i
-                                            class="bx bx-plus"></i></a>
+                                            class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -292,7 +292,7 @@
                                 <h4>Tahfidz</h4>
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po6.jpeg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Tahfidz"><i class="bx bx-plus"></i></a>
+                                        class="portfolio-lightbox" title="Tahfidz"><i class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -307,7 +307,7 @@
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po7.jpeg" data-gallery="portfolioGallery"
                                         class="portfolio-lightbox" title="Pembagian Sembako"><i
-                                            class="bx bx-plus"></i></a>
+                                            class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -322,7 +322,7 @@
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po8.jpeg" data-gallery="portfolioGallery"
                                         class="portfolio-lightbox" title="Pembagian Sembako"><i
-                                            class="bx bx-plus"></i></a>
+                                            class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
@@ -337,7 +337,7 @@
                                 <div class="portfolio-links">
                                     <a href="assets/img/portfolio/po9.jpeg" data-gallery="portfolioGallery"
                                         class="portfolio-lightbox" title="Pembagian Sembako"><i
-                                            class="bx bx-plus"></i></a>
+                                            class="bi bi-arrows-fullscreen"></i></a>
                                     <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
                                 </div>
                             </div>
