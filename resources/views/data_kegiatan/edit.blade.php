@@ -2,6 +2,17 @@
 
 @section('title', 'Pondok Yatim | Data Kegiatan')
 
+@section('js')
+<script src="{{asset('assets/ckeditor/ckeditor.js')}}"></script>
+<script>
+   var konten = document.getElementById("konten");
+     CKEDITOR.replace(konten,{
+     language:'en-gb'
+   });
+   CKEDITOR.config.allowedContent = true;
+</script>
+@endsection
+
 @section('content_header')
 
     Edit Data Kegiatan
@@ -41,7 +52,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Masukkan Foto</label>
-                                <input type="file" name="cover" value="{{ $kegiatan->cover }}"
+                                <input type="file" name="cover" value= {{ $kegiatan->cover }}
                                     class="form-control @error('cover') is-invalid @enderror">
                                 @error('cover')
                                     <span class="invalid-feedback" role="alert">
@@ -51,8 +62,8 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Keterangan</label>
-                                <textarea name="keterangan" value="{{ $kegiatan->keterangan }}"
-                                    class="form-control @error('keterangan') is-invalid @enderror"></textarea>
+                                <textarea id="konten" name="keterangan"
+                                    class="form-control @error('keterangan') is-invalid @enderror">{{ $kegiatan->keterangan }}</textarea>
                                 @error('keterangan')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

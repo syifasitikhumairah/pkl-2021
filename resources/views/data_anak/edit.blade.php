@@ -50,9 +50,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="">Jenis Kelamin</label>
-                                <input type="radio" name="jk" value="Perempuan"> Perempuan
-                                <input type="radio" name="jk" value="Laki-laki"> Laki-laki
+                                <label for="">Jenis Kelamin</label><br>
+                                <input type="radio" name="jk" value="Perempuan" {{$data_anak->jk == "Perempuan" ? "checked" : ""}}> Perempuan<br>
+                                <input type="radio" name="jk" value="Laki-laki" {{$data_anak->jk == "Laki-lxaki" ? "checked" : ""}}> Laki-laki
                                 @error('jk')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -62,12 +62,13 @@
                             <div class="form-group">
                                 <label for="">Pendidikan</label>
                                 <select name="pendidikan" class="form-control @error('pendidikan') is-invalid @enderror">
-                                    <option value="-">-</option>
-                                    <option value="Pra-TK">Pra-TK</option>
-                                    <option value="Pendidikan Anak Usia Dini">Pendidikan Anak Usia Dini</option>
-                                    <option value="Taman Kanak-kanak">Taman Kanak-kanak</option>
-                                    <option value="Sekolah Dasar">Sekolah Dasar</option>
-                                    <option value="Sekolah Menengah">Sekolah Menengah</option>
+                                    <option>-- pilih --</option>
+                                    <option value="Tidak Sekolah" {{$data_anak->pendidikan == "Tidak Sekolah" ? "selected" : ""}}>Tidak Sekolah</option>
+                                    <option value="Pra-TK" {{$data_anak->pendidikan == "Pra-TK" ? "selected" : ""}}>Pra-TK</option>
+                                    <option value="Pendidikan Anak Usia Dini" {{$data_anak->pendidikan == "Pendidikan Anak Usia Dini" ? "selected" : ""}}>Pendidikan Anak Usia Dini</option>
+                                    <option value="Taman Kanak-kanak" {{$data_anak->pendidikan == "Taman Kanak-kanak" ? "selected" : ""}}>Taman Kanak-kanak</option>
+                                    <option value="Sekolah Dasar" {{$data_anak->pendidikan == "Sekolah Dasar" ? "selected" : ""}}>Sekolah Dasar</option>
+                                    <option value="Sekolah Menengah" {{$data_anak->pendidikan == "Sekolah Menengah" ? "selected" : ""}}>Sekolah Menengah</option>
                                 </select>
                                 @error('pendidikan')
                                     <span class="invalid-feedback" role="alert">

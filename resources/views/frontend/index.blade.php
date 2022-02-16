@@ -193,161 +193,38 @@
         </section><!-- End Cta Section -->
 
         <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        {{-- <section id="portfolio" class="portfolio">
             <div class="container">
 
-                <div class="section-title">
-                    <h2>Galeri foto</h2>
+    <div class="section-title">
+        <h2>Galeri foto</h2>
+    </div>
+    <div class="row portfolio-container">
+        @foreach ($galeri as $data)
+        <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-wrap">
+                <img src="{{ $data->image() }}" class="img-fluid" alt="" style="width:354px; height:250px;">
+                <div class="portfolio-info">
+                    <h4>{{ $data->judul }}</h4>
+                    <div class="portfolio-links">
+                        <a href="{{ $data->image() }}" data-gallery="portfolioGallery"
+                            class="portfolio-lightbox" title="{{ $data->judul }}"><i
+                                class="bi bi-arrows-fullscreen"></i></a>
+                    </div>
                 </div>
-
-                <!-- <div class="row">
-                          <div class="col-lg-12 d-flex justify-content-center">
-                            <ul id="portfolio-flters">
-                              <li data-filter="*" class="filter-active">All</li>
-                              <li data-filter=".filter-app">App</li>
-                              <li data-filter=".filter-card">Card</li>
-                              <li data-filter=".filter-web">Web</li>
-                            </ul>
-                          </div>
-                        </div> -->
-
-                <div class="row portfolio-container">
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po1.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Penyaluran Bansos</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po1.jpeg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Penyaluran Bansos"><i
-                                            class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po2.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Tahfidz</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po2.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Tahfidz"><i class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po3.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Kunjungan</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po3.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Kunjungan"><i class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po4.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Camping</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po4.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Camping"><i class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po5.jpg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Pembagian Zakat</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po5.jpg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Pembagian Zakat"><i
-                                            class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po6.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Tahfidz</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po6.jpeg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Tahfidz"><i class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po7.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Pembagian Sembako</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po7.jpeg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Pembagian Sembako"><i
-                                            class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po8.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Pembagian Sembako</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po8.jpeg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Pembagian Sembako"><i
-                                            class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-4 col-md-6 portfolio-item">
-                        <div class="portfolio-wrap">
-                            <img src="assets/img/portfolio/po9.jpeg" class="img-fluid" alt="">
-                            <div class="portfolio-info">
-                                <h4>Pembagian Sembako</h4>
-                                <div class="portfolio-links">
-                                    <a href="assets/img/portfolio/po9.jpeg" data-gallery="portfolioGallery"
-                                        class="portfolio-lightbox" title="Pembagian Sembako"><i
-                                            class="bi bi-arrows-fullscreen"></i></a>
-                                    <!-- <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a> -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
-        </section>
+        </div>
+        @endforeach
+        <div class="form-group text-center">
+            <a href="/kegiatan/all"><button type="submit" class="btn btn-outline-primary"
+            style="background:#5cb874;
+            border-color: #5cb874;
+            color: white;
+            border-radius:25px;
+            width:400px;">Lihat Semua Kegiatan</button></a>
+        </div>
+    </div>
+        </section> --}}
         <!-- End Portfolio Section -->
 
         <!-- ======= Contact Section ======= -->

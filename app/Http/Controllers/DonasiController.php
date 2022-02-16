@@ -28,6 +28,18 @@ class DonasiController extends Controller
         return view('donasi.create');
     }
 
+    public function cetakForm()
+    {
+        return view('donasi.cetak');
+    }
+
+    public function cetakPertanggal($tglawal, $tglakhir)
+    {
+        // dd(["Tanggal Awal : ".$tglawal, "Tanggal Akhir : ".$tglakhir]);
+        $cetak = Donasi::whereDate('tanggal', '>=', $tglawal)->whereDate('tanggal', '<=', $tglakhir)->get();
+        return view('donasi.cetak-pertanggal', compact('cetak'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *
@@ -155,4 +167,4 @@ class DonasiController extends Controller
         Alert::success('Sukses', 'Data Berhasil di Hapus');
         return redirect()->route('donasi.index');
     }
-}
+    }

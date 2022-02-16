@@ -226,7 +226,7 @@ return [
 
     'menu' => [
         // Navbar items:
-        
+
         [
             'type'         => 'navbar-search',
             'text'         => 'search',
@@ -244,6 +244,11 @@ return [
         ],
         ['header' => ''],
         [
+            'text' => 'Home',
+            'url'  => '/home',
+            'icon' => 'fa fa-home',
+        ],
+        [
             'text' => 'Data Anak Asuh',
             'url'  => 'admin/data_anak',
             'icon' => 'fas fa-baby',
@@ -254,9 +259,19 @@ return [
             'icon' => 'far fa-folder-open',
         ],
         [
+            'text'    => 'Galeri',
+            'url'  => 'admin/galeri',
+            'icon'    => 'fas fa-image',
+        ],
+        [
             'text'    => 'Data Donasi',
             'url'  => 'admin/donasi',
             'icon'    => 'fas fa-hand-holding-heart',
+        ],
+        [
+            'text' => 'Laporan',
+            'url'  => "admin/cetak-laporan",
+            'icon' => 'far fa-folder-open',
         ],
     ],
 

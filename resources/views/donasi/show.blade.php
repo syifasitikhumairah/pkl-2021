@@ -41,8 +41,8 @@
                         </div>
                         <div class="form-group">
                             <label for="">Keterangan</label>
-                            <input type="text" name="keterangan" value="{{ $donasi->keterangan }}" class="form-control"
-                                readonly>
+                            <textarea name="keterangan" class="form-control"
+                                readonly>{{ $donasi->keterangan }}</textarea>
                         </div>
                         <div class="form-group">
                             <label for="">Foto</label><br>

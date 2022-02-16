@@ -18,7 +18,7 @@ class CreateDataKegiatansTable extends Migration
             $table->string('judul');
             $table->date('tanggal');
             $table->string('cover')->nullabel();
-            $table->string('keterangan');
+            $table->text('keterangan');
             $table->timestamps();
         });
     }

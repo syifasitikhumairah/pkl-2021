@@ -46,7 +46,7 @@ Tambah Data Anak Asuh
                         </div>
                         <div class="form-group">
                             <label for="">Jenis Kelamin</label><br>
-                            <input type="radio" name="jk" value="Perempuan" > Perempuan
+                            <input type="radio" name="jk" value="Perempuan" > Perempuan<br>
                             <input type="radio" name="jk" value="Laki-laki"> Laki-laki
                             @error('jk')
                                 <span class="invalid-feedback" role="alert">
@@ -57,7 +57,8 @@ Tambah Data Anak Asuh
                         <div class="form-group">
                             <label for="">Pendidikan</label>
                             <select name="pendidikan" class="form-control @error('pendidikan') is-invalid @enderror" >
-                                    <option value="-">-</option>
+                                <option>-- pilih --</option>
+                                    <option value="Tidak Sekolah">Tidak Sekolah</option>
                                     <option value="Pra-TK">Pra-TK</option>
                                     <option value="Pendidikan Anak Usia Dini">Pendidikan Anak Usia Dini</option>
                                     <option value="Taman Kanak-kanak">Taman Kanak-kanak</option>

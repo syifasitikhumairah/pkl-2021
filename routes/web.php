@@ -4,8 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DataAnakController;
 use App\Http\Controllers\DataKegiatanController;
 use App\Http\Controllers\DonasiController;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GaleriController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,10 +51,23 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
         return view('donasi.index');
     })->middleware(['role:admin']);
 
+    Route::get('galeri', function(){
+        return view('galeri.index');
+    })->middleware(['role:admin']);
+
+    Route::get('laporan', function(){
+        return view('laporan.index');
+    })->middleware(['role:admin']);
+
     Route::resource('data_anak', DataAnakController::class);
     Route::resource('data_kegiatan', DataKegiatanController::class);
     Route::resource('donasi', DonasiController::class);
+    Route::resource('galeri', GaleriController::class);
 
+    Route::get('/cetak-laporan', 'App\Http\Controllers\DonasiController@cetakForm')->name('cetak-laporan');
+    Route::get('/cetak-laporan-pertanggal/{tglawal}/{tglakhir}',
+        'App\Http\Controllers\DonasiController@cetakPertanggal')
+        ->name('cetak-laporan-pertanggal');
 });
 
 Route::get('/', function () {
@@ -68,6 +81,18 @@ Route::get('rekening', function () {
 Route::get('kegiatan', 'App\Http\Controllers\FrontendController@kegiatannya', function () {
     return view('frontend.kegiatan');
 });
+
+Route::get('kegiatan/all', 'App\Http\Controllers\FrontendController@kegiatanall', function () {
+    return view('frontend.kegiatanall');
+});
+
+Route::get('galeri', 'App\Http\Controllers\FrontendController@galeriall', function () {
+    return view('frontend.galeri');
+});
+
+// Route::get('#galeri', 'App\Http\Controllers\FrontendController@galerihome', function () {
+//     return view('frontend.index');
+// });
 
 Route::get('donasi/create', 'App\Http\Controllers\FrontendController@donasi', function () {
     return view('frontend.donasi');

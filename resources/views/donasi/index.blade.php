@@ -59,7 +59,6 @@
                                     <th>Email</th>
                                     <th>Telepon</th>
                                     <th>Tanggal</th>
-                                    </th>
                                     <th>Nominal</th>
                                     <th>Keterangan</th>
                                     <th>Bukti</th>
@@ -72,7 +71,7 @@
                                         <td>{{ $data->nm_donatur }}</td>
                                         <td>{{ $data->email }}</td>
                                         <td>{{ $data->telepon }}</td>
-                                        <td>{{ $data->tanggal }}</td>
+                                        <td>{{date('d-m-Y', strtotime($data->tanggal)) }}</td>
                                         <td>Rp. {{ number_format($data->nominal) }}</td>
                                         <td>{{ $data->keterangan }}</td>
                                         <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
@@ -83,7 +82,8 @@
                                                 @csrf
                                                 <a href="{{ route('donasi.show', $data->id) }}"
                                                     class="btn btn-outline-warning">Show</a>
-                                                <button type="submit" class="btn btn-outline-danger delete-confirm">Delete</button>
+                                                    <button type="submit"
+                                                    class="btn btn-outline-danger delete-confirm">Delete</button>
                                             </form>
                                         </td>
                                     </tr>

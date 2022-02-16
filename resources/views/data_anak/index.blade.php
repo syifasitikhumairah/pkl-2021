@@ -71,7 +71,7 @@
                                         <td>{{ $no++ }}</td>
                                         <td>{{ $data->nm_anak }}</td>
                                         <td>{{ $data->tempat_lahir }}</td>
-                                        <td>{{ $data->tgl_lahir }}</td>
+                                        <td>{{date('d-m-Y', strtotime($data->tgl_lahir)) }}</td>
                                         <td>{{ $data->jk }}</td>
                                         <td>{{ $data->pendidikan }}</td>
                                         <td>{{ $data->nm_wali }}</td>

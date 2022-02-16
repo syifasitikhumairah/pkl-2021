@@ -7,22 +7,31 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($kegiatan as $data)
                 <div class="col">
-                    <div class="card h-100">
+                    <div class="card h-100"  style="box-shadow: 0px 0px 12px 0px rgb(34 34 34 / 7%);">
                         <img src="{{ $data->image() }}" alt="" style="width:354px; height:200px;" alt="Cover"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title"><b>{{ $data->judul }}</b></h5>
-                        </div>
-                        <div class="card-body">
-                            <p class="card-title">{{ $data->keterangan }}</p>
+                            <h5 class="card-title" style="padding:5px"><b>{{ $data->judul }}</b></h5>
+                            <p>{!!$data->keterangan!!}</p>
                         </div>
                         <div class="card-footer">
-                            <small class="text-muted">{{ $data->tanggal }}</small>
+                           <center><small class="text-muted">{{date('d-m-Y', strtotime($data->tanggal)) }}</small></center>
                         </div>
 
                     </div>
                 </div>
             @endforeach
+        </div>
+        <br>
+        <br>
+        <div class="form-group text-center">
+            <a href="/kegiatan/all"><button type="submit" class="btn btn-outline-primary"
+            style="background:#5cb874;
+            border-color: #5cb874;
+            color: white;
+            border-radius:25px;
+            width:400px;
+            font-size: 18px;">Lihat Semua Kegiatan</button></a>
         </div>
     </div>
 @endsection

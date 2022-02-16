@@ -2,6 +2,17 @@
 
 @section('title', 'Pondok Yatim | Data Kegiatan')
 
+@section('js')
+<script src="{{asset('assets/ckeditor/ckeditor.js')}}"></script>
+<script>
+   var konten = document.getElementById("konten");
+     CKEDITOR.replace(konten,{
+     language:'en-gb'
+   });
+   CKEDITOR.config.allowedContent = true;
+</script>
+@endsection
+
 @section('content_header')
 
     Tambah Data Kegiatan
@@ -47,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Masukan Keterangan</label>
-                                <textarea name="keterangan"
+                                <textarea id="konten" name="keterangan"
                                     class="form-control @error('keterangan') is-invalid @enderror"></textarea>
                                 @error('keterangan')
                                     <span class="invalid-feedback" role="alert">
@@ -65,12 +76,4 @@
             </div>
         </div>
     </div>
-@endsection
-
-@section('css')
-
-@endsection
-
-@section('js')
-
 @endsection

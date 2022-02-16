@@ -4,54 +4,12 @@
         <div class="container">
 
             <div class="section-title">
-                <h2>Rekening Donasi</h2>
+                <h2>Donasi</h2>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table">
-                                    <tr>
-                                        <th>No</th>
-                                        <th>Bank</th>
-                                        <th>Rekening</th>
-                                        <th>Atas Nama</th>
-                                        <th>Link Internet Bangking</th>
-                                    </tr>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>BCA</td>
-                                        <td>2828 555 222</td>
-                                        <td>YAYASAN PONDOK YATIM</td>
-                                        <td><a href="https://www.klikbca.com/">Klik disini</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>2</th>
-                                        <td>BSI</td>
-                                        <td>7666666617</td>
-                                        <td>PONDOK YATIM</td>
-                                        <td><a href="https://bsinet.bankbsi.co.id/cms/index.php">Klik disini</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th>3</th>
-                                        <td>Mandiri</td>
-                                        <td>132 004 118 5555</td>
-                                        <td>YAY PONDOK YATIM</td>
-                                        <td><a href="https://ibank.bankmandiri.co.id/retail3/">Klik disini</a></td>
-                                    </tr>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="section-title">
-                        <h2>Donasi</h2>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-12">
-                            <div class="card" color="green">
-                                <div class="card-body">
+            <div class="row">
+
+                        <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                            <div class="info">
                                     <form action="{{ route('storeDonasi') }}" method="post" enctype="multipart/form-data">
                                         @csrf
                                         <div class="form-group">
@@ -76,7 +34,8 @@
                                             @enderror
                                         </div>
                                         <br>
-                                        <div class="form-group">
+                                        <div class="row">
+                                        <div class="form-group col-md-6">
                                             <label for=""><b>No Telepon</b></label>
                                             <input type="number" name="telepon"
                                                 class="form-control @error('telepon') is-invalid @enderror">
@@ -86,8 +45,7 @@
                                                 </span>
                                             @enderror
                                         </div>
-                                        <br>
-                                        <div class="form-group">
+                                        <div class="form-group col-md-6 mt-3 mt-md-0">
                                             <label for=""><b>Tanggal</b></label>
                                             <input type="date" name="tanggal"
                                                 class="form-control @error('tanggal') is-invalid @enderror">
@@ -97,6 +55,7 @@
                                                 </span>
                                             @enderror
                                         </div>
+                                    </div>
                                         <br>
                                         <div class="form-group">
                                             <label for=""><b>Nominal</b></label>
@@ -111,8 +70,8 @@
                                         <br>
                                         <div class="form-group">
                                             <label for=""><b>Keterangan</b></label>
-                                            <textarea name="keterangan"
-                                                placeholder="(Pesan atau do'a yang akan disampaikan...)"
+                                            <textarea name="keterangan" rows="3"
+                                                placeholder="(-- Pesan atau do'a yang akan disampaikan --)"
                                                 class="form-control @error('keterangan') is-invalid @enderror"></textarea>
                                             @error('keterangan')
                                                 <span class="invalid-feedback" role="alert">
@@ -133,13 +92,41 @@
                                         </div>
                                         <br>
                                         <div class="form-group text-center">
-                                            <button type="submit" class="btn btn-outline-primary">KIRIM</button>
+                                            <button type="submit" class="btn btn-outline-primary" style="background:#5cb874; border-color: #5cb874; color: white;">KIRIM</button>
                                         </div>
                                     </form>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+                            <div class="col-lg-5 d-flex align-items-stretch" style="height: 280px">
+                                <div class="info" style="background:#5cb87525">
+                                            <table class="table">
+                                                <tr>
+                                                    <th>No</th>
+                                                    <th>Bank</th>
+                                                    <th>Rekening</th>
+                                                    <th>Atas Nama</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>1</th>
+                                                    <td>BCA</td>
+                                                    <td>2828 555 222</td>
+                                                    <td>YAYASAN PONDOK YATIM</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>2</th>
+                                                    <td>BSI</td>
+                                                    <td>7666666617</td>
+                                                    <td>PONDOK YATIM</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>3</th>
+                                                    <td>Mandiri</td>
+                                                    <td>132 004 118 5555</td>
+                                                    <td>YAY PONDOK YATIM</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+        </div>
         @endsection

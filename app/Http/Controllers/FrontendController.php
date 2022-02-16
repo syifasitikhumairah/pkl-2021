@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\DataKegiatan;
 use App\Models\Donasi;
+use App\Models\Galeri;
 use Illuminate\Http\Request;
 use Session;
 use Alert;
@@ -16,11 +17,31 @@ class FrontendController extends Controller
      */
     public function kegiatannya()
     {
-
-        $kegiatan = DataKegiatan::all();
+        $kegiatan = DataKegiatan::orderBy('created_at', 'desc')->take(3)->get();
         return view('frontend.kegiatan', compact('kegiatan'));
 
     }
+
+    public function kegiatanall()
+    {
+        $kegiatan = DataKegiatan::all();
+        return view('frontend.kegiatanall', compact('kegiatan'));
+
+    }
+
+    public function galeriall()
+    {
+        $galeri = Galeri::all();
+        return view('frontend.galeri', compact('galeri'));
+
+    }
+
+    // public function galerihome()
+    // {
+    //     $galeri = Galeri::orderBy('created_at', 'desc')->take(3)->get();
+    //     return view('frontend.index', compact('galeri'));
+
+    // }
 
     public function donasi()
     {
@@ -32,7 +53,7 @@ class FrontendController extends Controller
     {
         $validated = $request->validate([
             'nm_donatur' => 'required',
-            'email' => 'required|email:dns',
+            'email' => 'required|email',
             'telepon' => 'required',
             'tanggal' => 'required',
             'nominal' => 'required',
@@ -54,7 +75,8 @@ class FrontendController extends Controller
         $donasi->cover = $name;
         }
         $donasi->save();
-        Alert::success('Sukses', 'Donasi Berhasil');
+        Alert::success('Donasi Berhasil', 'Terimakasih atas donasi yang telah Anda berikan, Insya Allah donasi akan kami
+        sampaikan kepada orang-orang yang membutuhkan.');
         Session::flash("flash_notification", [
             "level" => "succes",
             "message" => "Data saved successfully",
