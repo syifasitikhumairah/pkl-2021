@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label for="">Tanggal</label>
-                            <input type="text" name="tanggal" value="{{ $donasi->tanggal }}" class="form-control"
+                            <input type="text" name="tanggal" value="{{date('d-m-Y', strtotime($donasi->tanggal)) }}" class="form-control"
                                 readonly>
                         </div>
                         <div class="form-group">

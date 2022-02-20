@@ -37,7 +37,8 @@ class DonasiController extends Controller
     {
         // dd(["Tanggal Awal : ".$tglawal, "Tanggal Akhir : ".$tglakhir]);
         $cetak = Donasi::whereDate('tanggal', '>=', $tglawal)->whereDate('tanggal', '<=', $tglakhir)->get();
-        return view('donasi.cetak-pertanggal', compact('cetak'));
+        $total = Donasi::whereDate('tanggal', '>=', $tglawal)->whereDate('tanggal', '<=', $tglakhir)->sum('nominal');
+        return view('donasi.cetak-pertanggal', compact('cetak', 'total'));
     }
 
     /**

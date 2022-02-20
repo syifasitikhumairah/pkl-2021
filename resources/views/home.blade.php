@@ -44,7 +44,56 @@
                     <!-- /.info-box-content -->
                 </div>
                 <!-- /.info-box -->
-            </div></div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1" style="background-color: #5cb874!important;"><i class="fas fa-baby"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Data Anak Asuh</span>
+                        <span class="info-box-number">
+                            <h3><b>{{ DB::table('data_anaks')->count() }}</b></h3>
+                        </span>
+                        <span class="info-box-content">
+                            <a href="{{ route('data_anak.index') }}" class="text-right">Lihat Detail</a>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1" style="background-color: orange!important;"><i class="far fa-folder-open"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Data Kegiatan</span>
+                        <span class="info-box-number">
+                            <h3><b>{{ DB::table('data_kegiatans')->count() }}</b></h3>
+                        </span>
+                        <span class="info-box-content">
+                            <a href="{{ route('data_kegiatan.index') }}" class="text-right">Lihat Detail</a>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1" style="background-color: #e74c3c!important;"><i class="fas fa-image"></i></span>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Foto Galeri</span>
+                        <span class="info-box-number">
+                            <h3><b>{{ DB::table('galeris')->count() }}</b></h3>
+                        </span>
+                        <span class="info-box-content">
+                            <a href="{{ route('galeri.index') }}" class="text-right">Lihat Detail</a>
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+        </div>
 
     </div>
 @endsection

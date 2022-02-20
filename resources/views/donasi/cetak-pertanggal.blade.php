@@ -1,24 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Cetak Laporan Data Donasi</title>
     <style>
-        table tr td{
+        table tr td {
             font-size: 15px;
         }
-        table tr .text{
+
+        table tr .text {
             text-align: right;
             font-size: 15px;
         }
-        table tr .text1{
-            text-align: left;
+
+        table tr .text1 {
+            text-align: right;
             font-size: 15px;
         }
+
+        table tr .jumlah {
+            font-size: 15px;
+        }
+
+        table tr .total {
+            padding-left: 20px;
+            font-size: 15px;
+        }
+
     </style>
 </head>
+
 <body>
     <script language="JavaScript">
         var tanggallengkap = new String();
@@ -31,66 +45,80 @@
         var tanggal = tgl.getDate();
         var bulan = tgl.getMonth();
         var tahun = tgl.getFullYear();
-        tanggallengkap = namahari[hari] + ", " +tanggal + " " + namabulan[bulan] + " " + tahun;
+        tanggallengkap = namahari[hari] + ", " + tanggal + " " + namabulan[bulan] + " " + tahun;
     </script>
     <center>
-        <table  width="710">
+        <table width="710">
             <tr>
-                <td><img src="{{asset('vendor/adminlte/dist/img/logo1.png')}}" width="70" height="70"></td>
+                <td><img src="{{ asset('vendor/adminlte/dist/img/logo1.png') }}" width="70" height="70"></td>
                 <td>
                     <center>
                         <font size="6"><b>Pondok Yatim</b></font><br>
-                        <font size="2">JL. Cibaduyut Komplek, JL. Sauyunan I No.14, Kb. Lega, Kec. Bojongloa Kidul, Kota Bandung, Jawa Barat 40235</font><br>
+                        <font size="2">JL. Cibaduyut Komplek, JL. Sauyunan I No.14, Kb. Lega, Kec. Bojongloa Kidul, Kota
+                            Bandung, Jawa Barat 40235</font><br>
                         <font size="2"><i>Email: pondokyatim@gmail.com, Telepon: +62 8983529947</i></font>
                     </center>
                 </td>
             </tr>
             <tr>
-                <td colspan="2"><hr></td>
+                <td colspan="2">
+                    <hr>
+                </td>
             </tr>
         </table>
-        <table  width="710">
+        <table width="710">
             <tr>
-                <td class="text"><script language='JavaScript'>document.write(tanggallengkap);</script></td>
+                <td class="text1">
+                    <script language='JavaScript'>
+                        document.write(tanggallengkap);
+                    </script>
+                </td>
             </tr>
         </table>
         <br>
         <table width="710">
             <tr>
-                <td class="text2"><h3>Laporan Data Donasi : </h3></td>
+                <td class="text2">
+                    <h3>Laporan Data Donasi : </h3>
+                </td>
             </tr>
         </table>
         <table border="1px" width="710">
-        <tr>
-            <th>No</th>
-            <th>Nama Donatur</th>
-            <th>Email</th>
-            <th>Telepon</th>
-            <th>Tanggal</th>
-            <th>Nominal</th>
-            <th>Keterangan</th>
-            <th>Bukti</th>
-        </tr>
-        @php $no=1; @endphp
-        @foreach ($cetak as $data)
             <tr>
-                <td>{{ $no++ }}</td>
-                <td>{{ $data->nm_donatur }}</td>
-                <td>{{ $data->email }}</td>
-                <td>{{ $data->telepon }}</td>
-                <td>{{date('d-m-Y', strtotime($data->tanggal)) }}</td>
-                <td>Rp. {{ number_format($data->nominal) }}</td>
-                <td>{{ $data->keterangan }}</td>
-                <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
-                </td>
+                <th>No</th>
+                <th>Nama Donatur</th>
+                <th>Email</th>
+                <th>Telepon</th>
+                <th>Tanggal</th>
+                <th>Nominal</th>
+                <th>Keterangan</th>
+                <th>Bukti</th>
             </tr>
-        @endforeach
+            @php $no=1; @endphp
+            @foreach ($cetak as $data)
+                <tr>
+                    <td>{{ $no++ }}</td>
+                    <td>{{ $data->nm_donatur }}</td>
+                    <td>{{ $data->email }}</td>
+                    <td>{{ $data->telepon }}</td>
+                    <td>{{ date('d-m-Y', strtotime($data->tanggal)) }}</td>
+                    <td>Rp. {{ number_format($data->nominal) }}</td>
+                    <td>{{ $data->keterangan }}</td>
+                    <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+        <table border="1" width="710" height="100">
+            <tr>
+                <td width="420" class="total"><b>Total Dana : </b></td>
+                <td align="center" class="jumlah"><b>Rp. {{ number_format($total) }}</b></td>
+            </tr>
         </table>
     </center>
-
-<script type="text/javascript">
-    window.print();
-
-</script>
+    <script type="text/javascript">
+        window.print();
+    </script>
 </body>
+
 </html>

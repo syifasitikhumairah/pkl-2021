@@ -11,8 +11,8 @@
                         <img src="{{ $data->image() }}" alt="" style="width:354px; height:200px;" alt="Cover"
                             class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title" style="padding:5px"><b>{{ $data->judul }}</b></h5>
-                            <p>{!! $data->keterangan !!}</p>
+                            <h5 class="card-title" style="padding:5px;"><b>{{ $data->judul }}</b></h5>
+                            <p style="text-align: justify; ">{!! $data->keterangan !!}</p>
                         </div>
                         <div class="card-footer">
                             <center><small class="text-muted">{{ date('d-m-Y', strtotime($data->tanggal)) }}</small>

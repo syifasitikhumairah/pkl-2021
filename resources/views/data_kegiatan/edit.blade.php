@@ -51,7 +51,9 @@
                                 @enderror
                             </div>
                             <div class="form-group">
-                                <label for="">Masukkan Foto</label>
+                                <label for="">Masukkan Foto</label><br>
+                                <img src="{{ $kegiatan->image() }}" alt="" style="width:150px; height:80px;"
+                                                alt="Cover">
                                 <input type="file" name="cover" value= {{ $kegiatan->cover }}
                                     class="form-control @error('cover') is-invalid @enderror">
                                 @error('cover')
