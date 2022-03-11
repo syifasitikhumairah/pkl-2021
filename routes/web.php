@@ -6,6 +6,7 @@ use App\Http\Controllers\DataKegiatanController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GaleriController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +64,7 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
     Route::resource('data_kegiatan', DataKegiatanController::class);
     Route::resource('donasi', DonasiController::class);
     Route::resource('galeri', GaleriController::class);
-
+    Route::resource('about', AboutController::class);
     Route::get('/cetak-laporan', 'App\Http\Controllers\DonasiController@cetakForm')->name('cetak-laporan');
     Route::get('/cetak-laporan-pertanggal/{tglawal}/{tglakhir}',
         'App\Http\Controllers\DonasiController@cetakPertanggal')
@@ -74,8 +75,8 @@ Route::get('/', function () {
     return view('frontend.index');
 });
 
-Route::get('rekening', function () {
-    return view('frontend.rekening');
+Route::get('/#about', 'App\Http\Controllers\AboutController@about', function () {
+    return view('frontend.index');
 });
 
 Route::get('kegiatan', 'App\Http\Controllers\FrontendController@kegiatannya', function () {
@@ -85,6 +86,10 @@ Route::get('kegiatan', 'App\Http\Controllers\FrontendController@kegiatannya', fu
 Route::get('kegiatan/all', 'App\Http\Controllers\FrontendController@kegiatanall', function () {
     return view('frontend.kegiatanall');
 });
+
+// Route::get('kegiatan/detail', 'App\Http\Controllers\FrontendController@detailKegiatan', function () {
+//     return view('frontend.detailKegiatan');
+// });
 
 Route::get('galeri', 'App\Http\Controllers\FrontendController@galeriall', function () {
     return view('frontend.galeri');

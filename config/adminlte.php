@@ -259,6 +259,11 @@ return [
             'icon' => 'far fa-folder-open',
         ],
         [
+            'text' => 'About',
+            'url'  => 'admin/about',
+            'icon' => 'far fa-folder-open',
+        ],
+        [
             'text'    => 'Galeri',
             'url'  => 'admin/galeri',
             'icon'    => 'fas fa-image',

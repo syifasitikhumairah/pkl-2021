@@ -16,7 +16,7 @@
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#donasi').DataTable();
         });
     </script>
     <script src="{{asset('js/sweetalert2.js')}}"></script>
@@ -52,7 +52,8 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" id="donasi">
+                                <thead>
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Donatur</th>
@@ -62,8 +63,9 @@
                                     <th>Nominal</th>
                                     <th>Keterangan</th>
                                     <th>Bukti</th>
-                                    <th>Aksi</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @php $no=1; @endphp
                                 @foreach ($donasi as $data)
                                     <tr>
@@ -75,16 +77,6 @@
                                         <td>Rp. {{ number_format($data->nominal) }}</td>
                                         <td>{{ $data->keterangan }}</td>
                                         <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
-                                        </td>
-                                        <td>
-                                            <form action="{{ route('donasi.destroy', $data->id) }}" method="post">
-                                                @method('delete')
-                                                @csrf
-                                                <a href="{{ route('donasi.show', $data->id) }}"
-                                                    class="btn btn-outline-warning">Show</a>
-                                                    <button type="submit"
-                                                    class="btn btn-outline-danger delete-confirm">Delete</button>
-                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach

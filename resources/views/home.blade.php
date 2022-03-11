@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Pondok Yatim | Home')
+@section('title', 'Pondok Yatim || Home')
 
 @section('content_header')
 

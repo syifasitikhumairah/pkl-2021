@@ -31,6 +31,6 @@
                 color: white;
                 border-radius:25px;
                 width:400px;
-                font-size: 18px;">Tampilkan Kegiatan Lebih Sedikit</button></a>
+                font-size: 18px;">Tampilkan Lebih Sedikit Kegiatan</button></a>
         </div>
     @endsection

@@ -14,6 +14,11 @@
                             <h5 class="card-title" style="padding:5px"><b>{{ $data->judul }}</b></h5>
                             <p>{!!$data->keterangan!!}</p>
                         </div>
+                        {{-- <a href="/kegiatan/detail" class="btn btn-outline-primary"
+                        style="background:#5cb874;
+                        border-color: #5cb874;
+                        color: white;
+                        font-size: 18px;">Detail</a> --}}
                         <div class="card-footer">
                            <center><small class="text-muted">{{date('d-m-Y', strtotime($data->tanggal)) }}</small></center>
                         </div>

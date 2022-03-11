@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\DataKegiatan;
 use App\Models\Donasi;
 use App\Models\Galeri;
+use App\Models\About;
 use Illuminate\Http\Request;
 use Session;
 use Alert;
@@ -15,6 +16,13 @@ class FrontendController extends Controller
      *
      * @return void
      */
+    public function about()
+    {
+        $about = About::orderBy('created_at', 'desc')->take(1)->get();
+        return view('frontend.index', compact('about'));
+
+    }
+
     public function kegiatannya()
     {
         $kegiatan = DataKegiatan::orderBy('created_at', 'desc')->take(3)->get();
@@ -28,6 +36,13 @@ class FrontendController extends Controller
         return view('frontend.kegiatanall', compact('kegiatan'));
 
     }
+
+    // public function detailKegiatan($id)
+    // {
+    //     //
+    //     $kegiatan = DataKegiatan::findOrFail($id);
+    //     return view('frontend.detailKegiatan', compact('kegiatan'));
+    // }
 
     public function galeriall()
     {

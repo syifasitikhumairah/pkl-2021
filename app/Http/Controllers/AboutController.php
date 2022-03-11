@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Galeri;
+use App\Models\About;
 use Illuminate\Http\Request;
 use Alert;
 
-class GaleriController extends Controller
+class AboutController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,8 +14,8 @@ class GaleriController extends Controller
      */
     public function index()
     {
-        $galeri = Galeri::all();
-        return view('galeri.index', compact('galeri'));
+       $about = About::all();
+        return view('about.index', compact('about'));
     }
 
     /**
@@ -25,7 +25,7 @@ class GaleriController extends Controller
      */
     public function create()
     {
-        return view('galeri.create');
+        return view('about.create');
     }
 
     /**
@@ -38,23 +38,25 @@ class GaleriController extends Controller
     {
         // validasi data
         $validated = $request->validate([
-            // 'judul' => 'required',
-            'foto' => 'required|image|max:2048',
+            'visi' => 'required',
+            'misi' => 'required',
+            'cover' => 'required|image|max:2048',
 
         ]);
 
-        $galeri = new Galeri;
-        // $galeri->judul = $request->judul;
+        $about = new About;
+        $about->visi = $request->visi;
+        $about->misi = $request->misi;
         // upload image
-        if ($request->hasFile('foto')){
-            $image = $request->file('foto');
+        if ($request->hasFile('cover')){
+            $image = $request->file('cover');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('image/galeri/', $name);
-            $galeri->foto = $name;
+            $image->move('image/about/', $name);
+            $about->cover = $name;
         }
-        $galeri->save();
-        Alert::success('Sukses', 'Data Berhasil di Isi');
-        return redirect()->route('galeri.index');
+        $about->save();
+        Alert::success('Sukses', 'Data Berhasil Diisi');
+        return redirect()->route('about.index');
     }
 
     /**
@@ -65,8 +67,9 @@ class GaleriController extends Controller
      */
     public function show($id)
     {
-        $galeri = Galeri::findOrFail($id);
-        return view('galeri.show', compact('galeri'));
+        //
+        $about = About::findOrFail($id);
+        return view('about.show', compact('kegiatan'));
     }
 
     /**
@@ -77,8 +80,9 @@ class GaleriController extends Controller
      */
     public function edit($id)
     {
-        $galeri = Galeri::findOrFail($id);
-        return view('galeri.edit', compact('galeri'));
+        //
+        $about = About::findOrFail($id);
+        return view('about.edit', compact('kegiatan'));
     }
 
     /**
@@ -92,23 +96,25 @@ class GaleriController extends Controller
     {
         // validasi data
         $validated = $request->validate([
-            // 'judul' => 'required',
-            // 'foto' => 'required|image|max:2048',
-
+            'visi' => 'required',
+            'misi' => 'required',
+            'cover' => 'required|image|max:2048',
         ]);
 
-        $galeri = new Galeri;
-        // $galeri->judul = $request->judul;
-        // upload image
-        if ($request->hasFile('foto')){
-            $image = $request->file('foto');
+        $about = About::findOrFail($id);
+        $about->visi = $request->visi;
+        $about->misi = $request->misi;
+        // upload image / foto
+        if ($request->hasFile('cover')) {
+            $about->deleteImage();
+            $image = $request->file('cover');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
-            $image->move('image/galeri/', $name);
-            $galeri->foto = $name;
+            $image->move('image/about/', $name);
+            $about->cover = $name;
         }
-        $galeri->save();
-        Alert::success('Sukses', 'Data Berhasil di Ubah');
-        return redirect()->route('galeri.index');
+        $about->save();
+        Alert::success('Sukses', 'Data Berhasil Diubah');
+        return redirect()->route('about.index');
     }
 
     /**
@@ -119,10 +125,10 @@ class GaleriController extends Controller
      */
     public function destroy($id)
     {
-        if (!Galeri::destroy($id)) {
+        if (!About::destroy($id)) {
             return redirect()->back();
         }
         Alert::success('Sukses', 'Data Berhasil Dihapus');
-        return redirect()->route('galeri.index');
+        return redirect()->route('about.index');
     }
 }

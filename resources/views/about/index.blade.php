@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Pondok Yatim | Data Galeri')
+@section('title', 'Pondok Yatim | About')
 
 @section('content_header')
 
-    Data Galeri
+    About
 
 @endsection
 
@@ -16,7 +16,7 @@
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#galeri').DataTable();
+            $('#about').DataTable();
         });
     </script>
     <script src="{{asset('js/sweetalert2.js')}}"></script>
@@ -48,37 +48,39 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Data Galeri
-                        <a href="{{ route('galeri.create') }}"
-                            class="btn btn-sm btn-outline-primary float-right">Tambah Data Galeri</a>
+                        About
+                        <a href="{{ route('about.create') }}"
+                            class="btn btn-sm btn-outline-primary float-right">Tambah About</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table" id="galeri">
+                            <table class="table" id="about">
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    <th>Judul</th>
+                                    <th>Visi</th>
+                                    <th>Misi</th>
                                     <th>Foto</th>
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @php $no=1; @endphp
-                                @foreach ($galeri as $data)
+                                @foreach ($about as $data)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        <td>{{ $data->judul }}</td>
+                                        <td>{!!$data->visi!!}</td>
+                                        <td>{!!$data->misi!!}</td>
                                         <td><img src="{{ $data->image() }}" alt="" style="width:150px; height:80px;"
-                                                alt="foto"></td>
+                                                alt="Cover"></td>
 
                                         <td>
-                                            <form action="{{ route('galeri.destroy', $data->id) }}" method="post">
+                                            <form action="{{ route('about.destroy', $data->id) }}" method="post">
                                                 @method('delete')
                                                 @csrf
-                                                <a href="{{ route('galeri.edit', $data->id) }}"
+                                                <a href="{{ route('about.edit', $data->id) }}"
                                                     class="btn btn-outline-info">Edit</a>
-                                                <a href="{{ route('galeri.show', $data->id) }}"
+                                                <a href="{{ route('about.show', $data->id) }}"
                                                     class="btn btn-outline-warning">Show</a>
                                                 <button type="submit"
                                                     class="btn btn-outline-danger delete-confirm">Delete</button>

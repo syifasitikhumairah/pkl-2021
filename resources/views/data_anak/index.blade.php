@@ -16,7 +16,7 @@
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#example').DataTable();
+            $('#data_anak').DataTable();
         });
     </script>
     <script src="{{asset('js/sweetalert2.js')}}"></script>
@@ -54,7 +54,8 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" id="data_anak">
+                                <thead>
                                 <tr>
                                     <th>No</th>
                                     <th>Nama Anak</th>
@@ -65,6 +66,8 @@
                                     <th>Nama Wali</th>
                                     <th>Aksi</th>
                                 </tr>
+                                </thead>
+                                <tbody>
                                 @php $no=1; @endphp
                                 @foreach ($data_anak as $data)
                                     <tr>

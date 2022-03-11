@@ -80,19 +80,14 @@
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                         <h3>VISI</h3>
                         <p class="fst-italic">
-                            Terwujudnya Lembaga Amil Zakat Nasional yang unggul, amanah dan berperan aktif dalam pembangunan
-                            sumberdaya manusia berdasarkan pemberdayaan.
-                        </p><br>
+                            Terwujudnya Lembaga Amil Zakat Nasional yang unggul, amanah dan berperan aktif dalam
+                            pembangunan sumberdaya manusia berdasarkan pemberdayaan.</p><br>
                         <h3>MISI</h3>
-                        <p>
-                            Mengorganisasi sumber daya dan melakukan pemberdayaan potensi umat untuk kesejahteraan
-                            kemanusiaan,
-                            pendidikan, kesehatan dan dakwah. Mengoptimalisasi pengelolaan dana ziswaf (zakat, infaq,
-                            sedekah) dan
-                            kemanusiaan sesuai syari’at islam dan undang-undang yang berlaku. Bersinergi membangun program
-                            pemberdayaan
-                            dan pendayagunaan dengan menguatkan jaringan filantropi Nasional dan Internasional.
-                        </p>
+                        <p>Mengorganisasi sumber daya dan melakukan pemberdayaan potensi umat untuk kesejahtraan
+                            kemanusiaan, pendidikan, kesehatan dan dakwah. Mengoptimalisasi pengelolaan dana ziswaf
+                            (zakat, infaq, sedekah, wakaf) dan kemanusiaan sesuai syari’at islam dan undang-undang yang berlaku.
+                            Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan jaringan filantropi
+                            Nasional dan Internasional</p>
                     </div>
                 </div>
 
