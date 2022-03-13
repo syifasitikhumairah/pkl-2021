@@ -10,7 +10,7 @@
 
                     <div class="col-lg-5 d-flex align-items-stretch">
                     <div class="info" style="background:#5cb87525">
-                        <table class="table" style="">
+                        <table class="table" style="font-size: 13px;">
                             <tr>
                                 <th>No</th>
                                 <th>Bank</th>
