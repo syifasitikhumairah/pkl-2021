@@ -1,4 +1,4 @@
-<footer id="footer">
+{{-- <footer id="footer">
     <div class="container">
         <h3>Pondok Yatim</h3>
         <p>Pondok Yatim adalah Lembaga Amil Zakat Nasional (LAZNAS)
@@ -15,4 +15,4 @@
             &copy; Copyright by <strong><span>syifask</span></strong>. <br>All Rights Reserved
         </div>
     </div>
-</footer>
+</footer> --}}

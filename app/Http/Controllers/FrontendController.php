@@ -5,6 +5,7 @@ use App\Models\DataKegiatan;
 use App\Models\Donasi;
 use App\Models\Galeri;
 use App\Models\About;
+use App\Models\Rekening;
 use Illuminate\Http\Request;
 use Session;
 use Alert;
@@ -20,6 +21,13 @@ class FrontendController extends Controller
     {
         $about = About::orderBy('created_at', 'desc')->take(1)->get();
         return view('frontend.index', compact('about'));
+
+    }
+
+    public function rekening()
+    {
+        $rekening = Rekening::all();
+        return view('frontend.donasi', compact('rekening'));
 
     }
 

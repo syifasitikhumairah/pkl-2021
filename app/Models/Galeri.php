@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Galeri extends Model
 {
     use HasFactory;
+    protected $table ='galeris';
     //memberikan akses data apa saja yang bisa dilihat
     protected $visible=['foto'];
 

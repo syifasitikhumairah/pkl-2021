@@ -19,7 +19,7 @@
                             enctype="multipart/form-data">
                             @csrf
                             @method('put')
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="">Masukan Judul</label>
                                 <input type="text" name="judul" value="{{ $galeri->judul }}"
                                     class="form-control @error('judul') is-invalid @enderror">
@@ -28,9 +28,11 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div> --}}
                             <div class="form-group">
-                                <label for="">Masukkan Foto</label>
+                                <label for="">Masukkan Foto</label><br>
+                                <img src="{{ $galeri->image() }}" alt="" style="width:150px; height:80px;"
+                                                alt="Cover">
                                 <input type="file" name="foto" value= {{ $galeri->foto }}
                                     class="form-control @error('foto') is-invalid @enderror">
                                 @error('foto')

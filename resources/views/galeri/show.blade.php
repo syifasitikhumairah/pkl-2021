@@ -15,13 +15,15 @@
                 <div class="card">
                     <div class="card-header">Data Galeri</div>
                     <div class="card-body">
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="">Judul</label>
                             <input type="text" name="judul" value="{{ $galeri->judul }}" class="form-control" readonly>
-                        </div>
+                        </div> --}}
                         <div class="form-group">
                             <label for="">Foto</label><br>
-                            <img src="{{ $galeri->image() }}" alt="" style="width:300px; height:160px;" alt="Cover">
+                            <center>
+                            <img src="{{ $galeri->image() }}" alt="" style="width:800px; height:420px;" alt="Cover">
+                            </center>
                         </div>
                         <div class="form-group">
                             <a href="{{ url('admin/galeri') }}"

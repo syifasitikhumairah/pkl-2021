@@ -40,7 +40,7 @@
 <body>
 
     <!-- ======= Top Bar ======= -->
-    <!-- <section id="topbar" class="d-flex align-items-center">
+    {{-- <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
         <i class="bi bi-envelope-fill"></i><a href="mailto:contact@example.com">info@example.com</a>
@@ -53,10 +53,30 @@
         <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
       </div>
     </div>
-  </section> -->
+  </section> --}}
 
     <!-- ======= Header ======= -->
-    @include('layouts.partials.header')
+    <header id="header" class="d-flex align-items-center" style="">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">SIM Pondok Yatim</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="/">Home<i class="bi bi-house-fill"></i></a></li>
+                <li><a class="nav-link scrollto" href="/#about">Tentang Kami<i class=" bi bi-activity"></i></a></li>
+                <li><a class="nav-link scrollto" href="/kegiatan">Kegiatan<i class=" bi bi-calendar2"></i></a></li>
+                <li><a class="nav-link scrollto " href="/galeri">Galeri Foto<i class="bi bi-images"></i></a></li>
+                <li><a class="nav-link scrollto " href="{{ route('createDonasi') }}">Donasi Sekarang<i class="bi bi-heart-fill"></i></a></li>
+                <li><a class="nav-link scrollto " href="/#contact">Kontak<i class="bi bi-telephone"></i></a></li>
+        </ul>
+        <i class="bi mobile-nav-toggle bi-list"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+    </header>
     <!-- End Header -->
 
     <!-- Main content -->
@@ -64,10 +84,28 @@
         @yield('content')
     </section>
     <!-- /.content -->
-    
+
 
     <!-- ======= Footer ======= -->
-    @include('layouts.partials.footer')
+    <footer id="footer">
+        <div class="container">
+            <h3>Pondok Yatim</h3>
+            <p>Pondok Yatim adalah Lembaga Amil Zakat Nasional (LAZNAS)
+                berdasarkan SK Kemenag RI No.120 Tahun 2019. Bertekad menjadi lembaga
+                pengelola dana ZISWAF yang berkhidmat menangani anak yatim/piatu dan terlantar.</p>
+            <div class="social-links">
+                <a href="" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="" class="google-plus"><i class="bx bxl-skype"></i></a>
+                <a href="" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; Copyright by <strong><span>syifask</span></strong>. <br>All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
     <!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i

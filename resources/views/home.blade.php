@@ -33,7 +33,7 @@
                 <div class="info-box">
                     <span class="info-box-icon bg-info elevation-1"><i class="fas fa-hand-holding-heart"></i></span>
                     <div class="info-box-content">
-                        <span class="info-box-text">Data Donasi</span>
+                        <span class="info-box-text">Data Donatur</span>
                         <span class="info-box-number">
                             <h3><b>{{ DB::table('donasis')->count() }}</b></h3>
                         </span>

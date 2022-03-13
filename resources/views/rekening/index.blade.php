@@ -1,10 +1,10 @@
 @extends('adminlte::page')
 
-@section('title', 'Pondok Yatim | Data Galeri')
+@section('title', 'Pondok Yatim | Data Rekening')
 
 @section('content_header')
 
-    Data Galeri
+    Data Rekening
 
 @endsection
 
@@ -16,7 +16,7 @@
     <script src="{{ asset('DataTables/datatables.min.js') }}"></script>
     <script>
         $(document).ready(function() {
-            $('#galeri').DataTable();
+            $('#rekening').DataTable();
         });
     </script>
     <script src="{{asset('js/sweetalert2.js')}}"></script>
@@ -48,38 +48,37 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Data Galeri
-                        <a href="{{ route('galeri.create') }}"
-                            class="btn btn-sm btn-outline-primary float-right">Tambah Data Galeri</a>
+                        Data Rekening
+                        <a href="{{ route('rekening.create') }}"
+                            class="btn btn-sm btn-outline-primary float-right">Tambah Data Rekening</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table" id="galeri">
+                            <table class="table" id="rekening">
                                 <thead>
                                 <tr>
                                     <th>No</th>
-                                    {{-- <th>Judul</th> --}}
-                                    <th>Foto</th>
+                                    <th>Bank</th>
+                                    <th>Rekening</th>
+                                    <th>Atas Nama</th>
                                     <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 @php $no=1; @endphp
-                                @foreach ($galeri as $data)
+                                @foreach ($rekening as $data)
                                     <tr>
                                         <td>{{ $no++ }}</td>
-                                        {{-- <td>{{ $data->$judul }}</td> --}}
-                                        <td><img src="{{ $data->image() }}" alt="" style="width:150px; height:80px;"
-                                                alt="foto"></td>
+                                        <td>{{ $data->bank }}</td>
+                                        <td>{{ $data->rekening }}</th>
+                                        <td>{{ $data->as }}</td>
 
                                         <td>
-                                            <form action="{{ route('galeri.destroy', $data->id) }}" method="post">
+                                            <form action="{{ route('rekening.destroy', $data->id) }}" method="post">
                                                 @method('delete')
                                                 @csrf
-                                                <a href="{{ route('galeri.edit', $data->id) }}"
+                                                <a href="{{ route('rekening.edit', $data->id) }}"
                                                     class="btn btn-outline-info">Edit</a>
-                                                <a href="{{ route('galeri.show', $data->id) }}"
-                                                    class="btn btn-outline-warning">Show</a>
                                                 <button type="submit"
                                                     class="btn btn-outline-danger delete-confirm">Delete</button>
                                             </form>

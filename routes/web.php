@@ -7,6 +7,7 @@ use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\RekeningController;
 
 /*
 |--------------------------------------------------------------------------
@@ -61,6 +62,7 @@ Route::group(['prefix' => 'admin','middleware' => ['auth']], function(){
     })->middleware(['role:admin']);
 
     Route::resource('data_anak', DataAnakController::class);
+    Route::resource('rekening', RekeningController::class);
     Route::resource('data_kegiatan', DataKegiatanController::class);
     Route::resource('donasi', DonasiController::class);
     Route::resource('galeri', GaleriController::class);
@@ -100,6 +102,10 @@ Route::get('galeri', 'App\Http\Controllers\FrontendController@galeriall', functi
 // });
 
 Route::get('donasi/create', 'App\Http\Controllers\FrontendController@donasi', function () {
+    return view('frontend.donasi');
+})->name('createDonasi');
+
+Route::get('donasi/create', 'App\Http\Controllers\FrontendController@rekening', function () {
     return view('frontend.donasi');
 })->name('createDonasi');
 

@@ -259,25 +259,37 @@ return [
             'icon' => 'far fa-folder-open',
         ],
         [
-            'text' => 'About',
-            'url'  => 'admin/about',
-            'icon' => 'far fa-folder-open',
-        ],
-        [
             'text'    => 'Galeri',
             'url'  => 'admin/galeri',
             'icon'    => 'fas fa-image',
         ],
         [
-            'text'    => 'Data Donasi',
-            'url'  => 'admin/donasi',
-            'icon'    => 'fas fa-hand-holding-heart',
+            'text'    => 'About',
+            'url'  => 'admin/about',
+            'icon'    => 'fas fa-folder-open',
         ],
         [
+            'text'    => 'Donasi',
+            'icon'    => 'fas fa-hand-holding-heart',
+            'submenu' => [
+                [
+            'text'    => 'Data Donatur',
+            'url'  => 'admin/donasi',
+            'icon_color'    => 'red',
+                ],
+                [
+            'text'    => 'Rekening',
+            'url'  => 'admin/rekening',
+            'icon_color'    => 'green',
+                ],
+                [
             'text' => 'Laporan',
             'url'  => "admin/cetak-laporan",
-            'icon' => 'far fa-folder-open',
+            'icon_color' => 'yellow',
+                ],
+            ],
         ],
+
     ],
 
     /*

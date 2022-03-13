@@ -17,7 +17,7 @@
                     <div class="card-body">
                         <form action="{{ route('galeri.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <label for="">Masukan Judul</label>
                                 <input type="text" name="judul" class="form-control @error('judul') is-invalid @enderror">
                                 @error('judul')
@@ -25,7 +25,7 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                            </div>
+                            </div> --}}
                             <div class="form-group">
                                 <label for="">Masukan Foto Galeri</label>
                                 <input type="file" name="foto" class="form-control @error('foto') is-invalid @enderror">

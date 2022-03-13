@@ -15,7 +15,7 @@
                             <h2 class="animate__animated animate__fadeInDown">Selamat Datang di <span>Sistem Informasi Pondok
                                     Yatim</span></h2>
                             <!-- <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
+                                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
                         </div>
                     </div>
                 </div>
@@ -85,8 +85,10 @@
                         <h3>MISI</h3>
                         <p>Mengorganisasi sumber daya dan melakukan pemberdayaan potensi umat untuk kesejahtraan
                             kemanusiaan, pendidikan, kesehatan dan dakwah. Mengoptimalisasi pengelolaan dana ziswaf
-                            (zakat, infaq, sedekah, wakaf) dan kemanusiaan sesuai syari’at islam dan undang-undang yang berlaku.
-                            Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan jaringan filantropi
+                            (zakat, infaq, sedekah, wakaf) dan kemanusiaan sesuai syari’at islam dan undang-undang yang
+                            berlaku.
+                            Bersinergi membangun program pemberdayaan dan pendayagunaan dengan menguatkan jaringan
+                            filantropi
                             Nasional dan Internasional</p>
                     </div>
                 </div>
@@ -261,33 +263,33 @@
                     </div>
 
                     <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                              <div class="row">
-                                <div class="form-group col-md-6">
-                                  <label for="name">Your Name</label>
-                                  <input type="text" name="name" class="form-control" id="name" required>
-                                </div>
-                                <div class="form-group col-md-6 mt-3 mt-md-0">
-                                  <label for="name">Your Email</label>
-                                  <input type="email" class="form-control" name="email" id="email" required>
-                                </div>
-                              </div>
-                              <div class="form-group mt-3">
-                                <label for="name">Subject</label>
-                                <input type="text" class="form-control" name="subject" id="subject" required>
-                              </div>
-                              <div class="form-group mt-3">
-                                <label for="name">Message</label>
-                                <textarea class="form-control" name="message" rows="10" required></textarea>
-                              </div>
-                              <div class="my-3">
-                                <div class="loading">Loading</div>
-                                <div class="error-message"></div>
-                                <div class="sent-message">Your message has been sent. Thank you!</div>
-                              </div>
-                              <div class="text-center"><button type="submit">Send Message</button></div>
-                            </form>
-                          </div> -->
+                                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                  <div class="row">
+                                    <div class="form-group col-md-6">
+                                      <label for="name">Your Name</label>
+                                      <input type="text" name="name" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="form-group col-md-6 mt-3 mt-md-0">
+                                      <label for="name">Your Email</label>
+                                      <input type="email" class="form-control" name="email" id="email" required>
+                                    </div>
+                                  </div>
+                                  <div class="form-group mt-3">
+                                    <label for="name">Subject</label>
+                                    <input type="text" class="form-control" name="subject" id="subject" required>
+                                  </div>
+                                  <div class="form-group mt-3">
+                                    <label for="name">Message</label>
+                                    <textarea class="form-control" name="message" rows="10" required></textarea>
+                                  </div>
+                                  <div class="my-3">
+                                    <div class="loading">Loading</div>
+                                    <div class="error-message"></div>
+                                    <div class="sent-message">Your message has been sent. Thank you!</div>
+                                  </div>
+                                  <div class="text-center"><button type="submit">Send Message</button></div>
+                                </form>
+                              </div> -->
 
                 </div>
 
@@ -295,5 +297,4 @@
         </section><!-- End Contact Section -->
 
     </main><!-- End #main -->
-
 @endsection
