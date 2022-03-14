@@ -18,7 +18,7 @@
             <div class="card-body">
                 <p class="card-title">
                     <center>
-                        <img src="assets/img/welcome.png" alt="" style="width:340px; height:100px;" alt="Cover"
+                        <img src="assets/img/welcome.png" alt="" style="width:auto; height:auto;" alt="Cover"
                             class="card-img-top" alt="...">
                     </center>
                 </p>
