@@ -30,7 +30,7 @@
                 border-color: #5cb874;
                 color: white;
                 border-radius:25px;
-                width:400px;
-                font-size: 18px;">Tampilkan Lebih Sedikit Kegiatan</button></a>
+                width:230px;
+                font-size: 18px;">Tampilkan Lebih Sedikit</button></a>
         </div>
     @endsection
