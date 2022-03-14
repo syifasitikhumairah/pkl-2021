@@ -35,7 +35,7 @@
             border-color: #5cb874;
             color: white;
             border-radius:25px;
-            width:400px;
+            width:220px;
             font-size: 18px;">Lihat Semua Kegiatan</button></a>
         </div>
     </div>
