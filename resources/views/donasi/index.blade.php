@@ -81,7 +81,7 @@
                                         </td>
 
                                         <td>
-                                            <form action="{{ route('data_kegiatan.destroy', $data->id) }}" method="post">
+                                            <form action="{{ route('donasi.destroy', $data->id) }}" method="post">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit"
