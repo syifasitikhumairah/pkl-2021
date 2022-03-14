@@ -16,12 +16,6 @@
                 <center><b>Selamat Datang di Halaman Administrator</b></center>
             </h5>
             <div class="card-body">
-                <p class="card-title">
-                    <center>
-                        <img src="assets/img/welcome.png" alt="" style="width:auto; height:auto;" alt="Cover"
-                            class="card-img-top" alt="...">
-                    </center>
-                </p>
                 <p class="card-text">
                     <center>Halaman ini hanya dapat diakses oleh user admin.</center>
                 </p>
