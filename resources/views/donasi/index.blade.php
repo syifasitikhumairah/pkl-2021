@@ -63,6 +63,7 @@
                                     <th>Nominal</th>
                                     <th>Keterangan</th>
                                     <th>Bukti</th>
+                                    <th>Aksi</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -77,6 +78,15 @@
                                         <td>Rp. {{ number_format($data->nominal) }}</td>
                                         <td>{{ $data->keterangan }}</td>
                                         <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
+                                        </td>
+
+                                        <td>
+                                            <form action="{{ route('data_kegiatan.destroy', $data->id) }}" method="post">
+                                                @method('delete')
+                                                @csrf
+                                                <button type="submit"
+                                                    class="btn btn-outline-danger delete-confirm">Delete</button>
+                                            </form>
                                         </td>
                                     </tr>
                                 @endforeach
