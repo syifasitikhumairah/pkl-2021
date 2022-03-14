@@ -63,7 +63,7 @@
                                     <th>Nominal</th>
                                     <th>Keterangan</th>
                                     <th>Bukti</th>
-                                    <th>Aksi</th>
+                                    {{-- <th>Aksi</th> --}}
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -80,14 +80,14 @@
                                         <td><img src="{{ $data->image() }}" style="width:80px; height:150px;" alt="...">
                                         </td>
 
-                                        <td>
+                                        {{-- <td>
                                             <form action="{{ route('donasi.destroy', $data->id) }}" method="post">
                                                 @method('delete')
                                                 @csrf
                                                 <button type="submit"
                                                     class="btn btn-outline-danger delete-confirm">Delete</button>
                                             </form>
-                                        </td>
+                                        </td> --}}
                                     </tr>
                                 @endforeach
                             </table>
