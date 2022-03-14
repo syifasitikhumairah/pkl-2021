@@ -161,11 +161,10 @@ class DonasiController extends Controller
      */
     public function destroy($id)
     {
-
         if (!Donasi::destroy($id)) {
             return redirect()->back();
         }
-        Alert::success('Sukses', 'Data Berhasil di Hapus');
+        Alert::success('Sukses', 'Data Berhasil Dihapus');
         return redirect()->route('donasi.index');
     }
     }
