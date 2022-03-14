@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Models\DataAnak;
 use App\Models\DataKegiatan;
 use App\Models\Donasi;
+use App\Models\Rekening;
+use App\Models\Galeri;
 use Illuminate\Http\Request;
 
 class KategoriController extends Controller
@@ -36,6 +38,20 @@ class KategoriController extends Controller
             'success' => true,
             'message' => 'Data Donasi',
             'data' => $donasi,
+        ], 200);
+
+        $rekening = Rekening::all();
+        return response ()->json([
+            'success' => true,
+            'message' => 'Data Rekening',
+            'data' => $rekening,
+        ], 200);
+
+        $galeri = Galeri::all();
+        return response ()->json([
+            'success' => true,
+            'message' => 'Galeri Foto',
+            'data' => $galeri,
         ], 200);
     }
 

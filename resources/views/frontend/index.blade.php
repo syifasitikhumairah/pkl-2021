@@ -104,26 +104,26 @@
                 </div>
                 <div class="row no-gutters">
 
-                    <div class="col-lg-6 col-md-6 content-item">
+                    <div class="col-lg-3 col-md-3 content-item">
                         <span>01</span>
                         <h4>Sidik</h4>
                         <p>Benar dalam pengelolaan sesuai dengan Syariat Islam.</p>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 content-item">
+                    <div class="col-lg-3 col-md-3 content-item">
                         <span>02</span>
                         <h4>Amanah</h4>
                         <p>Tepat dalam penerimaan dan penyaluran sesuai dengan Undang-Undang.</p>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 content-item">
+                    <div class="col-lg-3 col-md-3 content-item">
                         <span>03</span>
                         <h4>Fathonah</h4>
                         <p>Senantiasa menjalankan inovasi secara kreatif, efektif dan efisien dalam mewujudkan keberhasilan
                             institusi.</p>
                     </div>
 
-                    <div class="col-lg-6 col-md-6 content-item">
+                    <div class="col-lg-3 col-md-3 content-item">
                         <span>04</span>
                         <h4>Tabligh</h4>
                         <p>Membangun sinergi dengan semangat edukasi yang tinggi demi tercapainya kehidupan yang lebih baik.
