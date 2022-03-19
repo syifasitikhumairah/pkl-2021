@@ -15,7 +15,7 @@
                             <h2 class="animate__animated animate__fadeInDown">Selamat Datang di <span>Sistem Informasi Pondok
                                     Yatim</span></h2>
                             <!-- <p class="animate__animated animate__fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                                  <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
+                                      <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a> -->
                         </div>
                     </div>
                 </div>
@@ -104,26 +104,26 @@
                 </div>
                 <div class="row no-gutters">
 
-                    <div class="col-lg-3 col-md-3 content-item">
+                    <div class="col-lg-6 col-md-6 content-item">
                         <span>01</span>
                         <h4>Sidik</h4>
                         <p>Benar dalam pengelolaan sesuai dengan Syariat Islam.</p>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 content-item">
+                    <div class="col-lg-6 col-md-6 content-item">
                         <span>02</span>
                         <h4>Amanah</h4>
                         <p>Tepat dalam penerimaan dan penyaluran sesuai dengan Undang-Undang.</p>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 content-item">
+                    <div class="col-lg-6 col-md-6 content-item">
                         <span>03</span>
                         <h4>Fathonah</h4>
                         <p>Senantiasa menjalankan inovasi secara kreatif, efektif dan efisien dalam mewujudkan keberhasilan
                             institusi.</p>
                     </div>
 
-                    <div class="col-lg-3 col-md-3 content-item">
+                    <div class="col-lg-6 col-md-6 content-item">
                         <span>04</span>
                         <h4>Tabligh</h4>
                         <p>Membangun sinergi dengan semangat edukasi yang tinggi demi tercapainya kehidupan yang lebih baik.
@@ -263,33 +263,33 @@
                     </div>
 
                     <!-- <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-                                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                                  <div class="row">
-                                    <div class="form-group col-md-6">
-                                      <label for="name">Your Name</label>
-                                      <input type="text" name="name" class="form-control" id="name" required>
-                                    </div>
-                                    <div class="form-group col-md-6 mt-3 mt-md-0">
-                                      <label for="name">Your Email</label>
-                                      <input type="email" class="form-control" name="email" id="email" required>
-                                    </div>
-                                  </div>
-                                  <div class="form-group mt-3">
-                                    <label for="name">Subject</label>
-                                    <input type="text" class="form-control" name="subject" id="subject" required>
-                                  </div>
-                                  <div class="form-group mt-3">
-                                    <label for="name">Message</label>
-                                    <textarea class="form-control" name="message" rows="10" required></textarea>
-                                  </div>
-                                  <div class="my-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                  </div>
-                                  <div class="text-center"><button type="submit">Send Message</button></div>
-                                </form>
-                              </div> -->
+                                    <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                                      <div class="row">
+                                        <div class="form-group col-md-6">
+                                          <label for="name">Your Name</label>
+                                          <input type="text" name="name" class="form-control" id="name" required>
+                                        </div>
+                                        <div class="form-group col-md-6 mt-3 mt-md-0">
+                                          <label for="name">Your Email</label>
+                                          <input type="email" class="form-control" name="email" id="email" required>
+                                        </div>
+                                      </div>
+                                      <div class="form-group mt-3">
+                                        <label for="name">Subject</label>
+                                        <input type="text" class="form-control" name="subject" id="subject" required>
+                                      </div>
+                                      <div class="form-group mt-3">
+                                        <label for="name">Message</label>
+                                        <textarea class="form-control" name="message" rows="10" required></textarea>
+                                      </div>
+                                      <div class="my-3">
+                                        <div class="loading">Loading</div>
+                                        <div class="error-message"></div>
+                                        <div class="sent-message">Your message has been sent. Thank you!</div>
+                                      </div>
+                                      <div class="text-center"><button type="submit">Send Message</button></div>
+                                    </form>
+                                  </div> -->
 
                 </div>
 

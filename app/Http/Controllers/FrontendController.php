@@ -19,7 +19,7 @@ class FrontendController extends Controller
      */
     public function about()
     {
-        $about = About::orderBy('created_at', 'desc')->take(1)->get();
+        $about = About::all();
         return view('frontend.index', compact('about'));
 
     }

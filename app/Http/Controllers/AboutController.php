@@ -69,7 +69,7 @@ class AboutController extends Controller
     {
         //
         $about = About::findOrFail($id);
-        return view('about.show', compact('kegiatan'));
+        return view('about.show', compact('about'));
     }
 
     /**
@@ -82,7 +82,7 @@ class AboutController extends Controller
     {
         //
         $about = About::findOrFail($id);
-        return view('about.edit', compact('kegiatan'));
+        return view('about.edit', compact('about'));
     }
 
     /**
