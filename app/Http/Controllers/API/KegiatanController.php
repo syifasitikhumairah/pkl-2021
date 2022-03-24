@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\API;
 
 use App\Http\Controllers\Controller;
-use App\Models\DataAnak;
+// use App\Models\DataAnak;
 use App\Models\DataKegiatan;
-use App\Models\Donasi;
-use App\Models\Rekening;
-use App\Models\Galeri;
+// use App\Models\Donasi;
+// use App\Models\Rekening;
+// use App\Models\Galeri;
 use Illuminate\Http\Request;
 
-class KategoriController extends Controller
+class KegiatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -19,12 +19,12 @@ class KategoriController extends Controller
      */
     public function index()
     {
-        $data_anak = DataAnak::all();
-        return response ()->json([
-            'success' => true,
-            'message' => 'Data Anak',
-            'data' => $data_anak,
-        ], 200);
+        // $data_anak = DataAnak::all();
+        // return response ()->json([
+        //     'success' => true,
+        //     'message' => 'Data Anak',
+        //     'data' => $data_anak,
+        // ], 200);
 
         $kegiatan = DataKegiatan::all();
         return response ()->json([
@@ -33,26 +33,19 @@ class KategoriController extends Controller
             'data' => $kegiatan,
         ], 200);
 
-        $donasi = Donasi::all();
-        return response ()->json([
-            'success' => true,
-            'message' => 'Data Donasi',
-            'data' => $donasi,
-        ], 200);
+        // $rekening = Rekening::all();
+        // return response ()->json([
+        //     'success' => true,
+        //     'message' => 'Data Rekening',
+        //     'data' => $rekening,
+        // ], 200);
 
-        $rekening = Rekening::all();
-        return response ()->json([
-            'success' => true,
-            'message' => 'Data Rekening',
-            'data' => $rekening,
-        ], 200);
-
-        $galeri = Galeri::all();
-        return response ()->json([
-            'success' => true,
-            'message' => 'Galeri Foto',
-            'data' => $galeri,
-        ], 200);
+        // $galeri = Galeri::all();
+        // return response ()->json([
+        //     'success' => true,
+        //     'message' => 'Galeri Foto',
+        //     'data' => $galeri,
+        // ], 200);
     }
 
     /**

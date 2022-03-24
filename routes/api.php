@@ -1,6 +1,7 @@
 <?php
 
-use App\Http\Controllers\API\KategoriController;
+use App\Http\Controllers\API\KegiatanController;
+use App\Http\Controllers\API\LaporanController;
 use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,5 +22,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 //route api
-Route::resource('kategori', KategoriController::class);
+Route::resource('kegiatan', KegiatanController::class);
+Route::resource('laporan', LaporanController::class);
 Route::resource('users', UserController::class);
