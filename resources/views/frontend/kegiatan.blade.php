@@ -8,7 +8,7 @@
             @foreach ($kegiatan as $data)
                 <div class="col">
                     <div class="card h-100"  style="box-shadow: 0px 0px 12px 0px rgb(34 34 34 / 7%);">
-                        <img src="{{ $data->image() }}" alt="" style="width:354px; height:200px;" alt="Cover"
+                        <img src="{{ $data->image() }}" alt="" style="width:324px; height:200px;" alt="Cover"
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="padding:5px"><b>{{ $data->judul }}</b></h5>
