@@ -12,7 +12,7 @@
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="padding:5px"><b>{{ $data->judul }}</b></h5>
-                            <p>{!! $data->keterangan !!}</p>
+                            <p>{{ $data->keterangan }}</p>
                         </div>
                         {{-- <a href="/kegiatan/detail" class="btn btn-outline-primary"
                         style="background:#5cb874;

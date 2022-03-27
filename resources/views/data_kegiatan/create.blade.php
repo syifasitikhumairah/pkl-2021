@@ -58,7 +58,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="">Masukan Keterangan</label>
-                                <textarea id="konten" name="keterangan"
+                                <textarea name="keterangan"
                                     class="form-control @error('keterangan') is-invalid @enderror"></textarea>
                                 @error('keterangan')
                                     <span class="invalid-feedback" role="alert">

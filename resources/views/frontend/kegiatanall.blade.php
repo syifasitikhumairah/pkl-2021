@@ -12,7 +12,7 @@
                             class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title" style="padding:5px;"><b>{{ $data->judul }}</b></h5>
-                            <p style="text-align: justify; ">{!! $data->keterangan !!}</p>
+                            <p style="text-align: justify; ">{{ $data->keterangan }}</p>
                         </div>
                         <div class="card-footer">
                             <center><small class="text-muted">{{ date('d-m-Y', strtotime($data->tanggal)) }}</small>
@@ -27,10 +27,10 @@
         <br>
         <div class="form-group text-center">
             <a href="/kegiatan"><button type="submit" class="btn btn-outline-primary" style="background:#5cb874;
-                border-color: #5cb874;
-                color: white;
-                border-radius:25px;
-                width:230px;
-                font-size: 18px;">Tampilkan Lebih Sedikit</button></a>
+                    border-color: #5cb874;
+                    color: white;
+                    border-radius:25px;
+                    width:230px;
+                    font-size: 18px;">Tampilkan Lebih Sedikit</button></a>
         </div>
     @endsection

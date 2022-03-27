@@ -44,7 +44,7 @@
                             background-clip: padding-box;
                             border-radius: 0.25rem;
                             box-shadow: inset 0 0 0 transparent;
-                            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;">{!! $kegiatan->keterangan !!}</div>
+                            transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;">{{ $kegiatan->keterangan }}</div>
                         </div>
                         <div class="form-group">
                             <a href="{{ url('admin/data_kegiatan') }}"
