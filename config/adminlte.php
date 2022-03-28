@@ -263,11 +263,11 @@ return [
             'url'  => 'admin/galeri',
             'icon'    => 'fas fa-image',
         ],
-        [
-            'text'    => 'About',
-            'url'  => 'admin/about',
-            'icon'    => 'fas fa-folder-open',
-        ],
+        // [
+        //     'text'    => 'About',
+        //     'url'  => 'admin/about',
+        //     'icon'    => 'fas fa-folder-open',
+        // ],
         [
             'text'    => 'Donasi',
             'icon'    => 'fas fa-hand-holding-heart',
