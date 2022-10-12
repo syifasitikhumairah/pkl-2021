@@ -93,7 +93,7 @@ class GaleriController extends Controller
         // validasi data
         $validated = $request->validate([
             // 'judul' => 'required',
-            // 'foto' => 'required|image|max:2048',
+            'foto' => 'required|image|max:2048',
 
         ]);
 
